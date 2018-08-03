@@ -2,17 +2,22 @@ import React, { Component } from 'react'
 import 'semantic-ui-css/semantic.min.css'
 
 import Navigation from './components/Navigation'
+import Beranda from './scenes/Beranda'
 
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div style={styles.container}>
 				<Navigation />
-				<p>
-					To get started, edit <code>src/App.js</code> and save to reload.
-				</p>
+				<Beranda />
 			</div>
 		)
+	}
+}
+
+const styles = {
+	container: {
+		marginTop: 50
 	}
 }
 
