@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Image } from 'semantic-ui-react'
-import { scroller } from 'react-scroll'
+import { scroller, animateScroll } from 'react-scroll'
 import styled from 'styled-components'
 
 const Logo = styled(Image)`
@@ -13,14 +13,15 @@ class Navigator extends Component {
 	}
 
 	renderMenu() {
-		return this.props.menu.map(item => (
+		return this.props.menu.map((item, index) => (
 			<Menu.Item
+				key={index}
 				name={item}
 				link
 				active={this.isMenuActive(item)}
 				onClick={() => {
 					this.changeActiveMenu(item)
-					this.scrollTo(item)
+					this.handleScroll(index)
 				}}
 			/>
 		))
@@ -34,11 +35,20 @@ class Navigator extends Component {
 		this.setState({ activeMenu: menu })
 	}
 
+	handleScroll(index) {
+		if (index === 0) this.scrollToTop()
+		else this.scrollTo(this.props.menu[index])
+	}
+
+	scrollToTop() {
+		animateScroll.scrollToTop()
+	}
+
 	scrollTo(element) {
 		scroller.scrollTo(element, {
 			duration: 800,
 			delay: 0,
-			smooth: 'easeInOutQuart'
+			smooth: 'easeInOut'
 		})
 	}
 

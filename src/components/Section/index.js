@@ -12,7 +12,7 @@ const InnerContainer = styled(Grid)`
 class Section extends Component {
 	static propTypes = {
 		blur: PropTypes.number,
-		bgImage: PropTypes.symbol,
+		bgImage: PropTypes.string,
 		strength: PropTypes.number
 	}
 

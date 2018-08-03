@@ -8,7 +8,7 @@ const sizeLabel = ['small', 'medium', 'large', 'massive']
 const TextContainer = styled.div`
 	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
-	padding: ${props => (props.size == 'massive' ? 30 : 15)}px;
+	padding: ${props => (props.size === 'massive' ? 30 : 15)}px;
 	display: inline-block;
 	font-size: ${props => fontSize[sizeLabel.indexOf(props.size)]}px;
 	font-weight: ${props => (props.bold ? 'bold' : 'normal')};
