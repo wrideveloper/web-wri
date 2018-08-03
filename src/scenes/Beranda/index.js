@@ -3,6 +3,7 @@ import { Grid, Button } from 'semantic-ui-react'
 import Section from '../../components/Section'
 import SectionText from '../../components/SectionText'
 import Youtube from 'react-youtube'
+import styled from 'styled-components'
 
 class Beranda extends Component {
 	render() {

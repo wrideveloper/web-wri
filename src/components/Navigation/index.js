@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Menu, Image } from 'semantic-ui-react'
+import styled from 'styled-components'
+
+const Logo = styled(Image)`
+	margin-right: 15px;
+`
 
 class Navigator extends Component {
 	state = {
@@ -29,8 +34,11 @@ class Navigator extends Component {
 
 	render() {
 		return (
-			<Menu size="massive" borderless fixed="top" color="orange" inverted>
-				<Menu.Item header>Workshop Riset Informatika</Menu.Item>
+			<Menu size="massive" borderless fixed="top" color="orange">
+				<Menu.Item header>
+					<Logo src={require('./images/logo wri.png')} size="mini" />
+					Workshop Riset Informatika
+				</Menu.Item>
 				<Menu.Menu position="right">{this.renderMenu()}</Menu.Menu>
 			</Menu>
 		)
