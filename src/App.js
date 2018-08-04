@@ -13,12 +13,16 @@ class App extends Component {
 			<div style={styles.container}>
 				<Navigation menu={this.menu} />
 
-				<Element name="Beranda">
+				<Element id="Beranda">
 					<Beranda />
 				</Element>
 
-				<Element name="Kegiatan">
+				<Element id="Kegiatan">
 					<Kegiatan />
+				</Element>
+
+				<Element name="Foto">
+					<Beranda />
 				</Element>
 			</div>
 		)

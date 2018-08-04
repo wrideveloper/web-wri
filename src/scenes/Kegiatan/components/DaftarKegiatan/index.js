@@ -4,7 +4,7 @@ import { Header, Icon, Grid } from 'semantic-ui-react'
 import Zoom from 'react-reveal/Zoom'
 
 const Item = ({ title, icon, description }) => (
-	<Header>
+	<Header size="small">
 		<Icon name={icon} circular inverted />
 
 		<Header.Content>
