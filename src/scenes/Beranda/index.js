@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, Button, Icon } from 'semantic-ui-react'
-import Section from '../../components/Section'
-import SectionText from '../../components/SectionText'
+import { Section, SectionText } from '../../components'
 import Youtube from 'react-youtube'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'

@@ -54,8 +54,8 @@ class Navigator extends Component {
 
 	render() {
 		return (
-			<Menu size="massive" borderless fixed="top" color="orange">
-				<Menu.Item header>
+			<Menu size="massive" borderless fixed="top" inverted>
+				<Menu.Item header onClick={() => this.scrollToTop()}>
 					<Logo src={require('./images/logo wri.png')} size="mini" />
 					Workshop Riset Informatika
 				</Menu.Item>

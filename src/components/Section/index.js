@@ -5,8 +5,8 @@ import { Parallax } from 'react-parallax'
 import styled from 'styled-components'
 
 const InnerContainer = styled(Grid)`
-	padding-top: 48px !important;
-	padding-bottom: 48px !important;
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
 `
 
 class Section extends Component {
