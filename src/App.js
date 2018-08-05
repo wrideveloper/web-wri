@@ -3,7 +3,7 @@ import { Element } from 'react-scroll'
 import 'semantic-ui-css/semantic.min.css'
 
 import { Navigation } from './components'
-import { Beranda, Kegiatan } from './scenes'
+import { Beranda, Kegiatan, Foto } from './scenes'
 
 class App extends Component {
 	menu = ['Beranda', 'Kegiatan', 'Foto', 'Video', 'Tentang Kami', 'Tim Kami']
@@ -22,7 +22,7 @@ class App extends Component {
 				</Element>
 
 				<Element name="Foto">
-					<Beranda />
+					<Foto />
 				</Element>
 			</div>
 		)

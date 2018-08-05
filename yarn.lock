@@ -5436,7 +5436,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.3, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
+prop-types@^15.5.10, prop-types@^15.5.3, prop-types@^15.5.4, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@~15.6.1:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -5607,6 +5607,13 @@ react-is@^16.3.1:
 react-parallax@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-1.8.0.tgz#c7b5e845e3d829e5aedc76e77ac497edea616a22"
+
+react-photo-gallery@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/react-photo-gallery/-/react-photo-gallery-6.1.2.tgz#a893ebe3453770912377f4763af6c23e28b1e64e"
+  dependencies:
+    prop-types "~15.6.1"
+    resize-observer-polyfill "^1.5.0"
 
 react-reveal@^1.2.2:
   version "1.2.2"
@@ -5921,6 +5928,10 @@ require-uncached@^1.0.3:
 requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+
+resize-observer-polyfill@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.0.tgz#660ff1d9712a2382baa2cad450a4716209f9ca69"
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
