@@ -8,13 +8,15 @@ class SectionTitle extends Component {
 		image: PropTypes.string,
 		icon: PropTypes.string,
 		title: PropTypes.string.isRequired,
-		description: PropTypes.string
+		description: PropTypes.string,
+		inverted: PropTypes.bool
 	}
 
 	render() {
+		console.log('inverted ? ', this.props.inverted)
 		return (
 			<Fragment>
-				<Header size="huge" color="orange">
+				<Header size="huge" color="orange" inverted={this.props.inverted}>
 					<Icon name={this.props.icon} circular />
 
 					<Header.Content>

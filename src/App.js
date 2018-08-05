@@ -24,6 +24,10 @@ class App extends Component {
 				<Element name="Foto">
 					<Foto />
 				</Element>
+
+				<Element id="Video">
+					<Kegiatan />
+				</Element>
 			</div>
 		)
 	}
