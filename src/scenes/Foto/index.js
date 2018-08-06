@@ -7,7 +7,7 @@ import ImageComponent from './components/ImageComponent'
 import url from 'url'
 import http from 'http'
 import sizeOf from 'image-size'
-import ratio from 'aspect-ratio'
+import ratioOf from 'aspect-ratio'
 
 const photoSourse = [
 	'https://cdn-images-1.medium.com/max/2000/1*cCdSJ0mOqjQkm-soL5hlIw.jpeg',
@@ -31,27 +31,24 @@ class Foto extends Component {
 		this.fetchPhotos()
 	}
 
-	async fetchPhotos() {
-		const promises = photoSourse.map((photo, index) => {
-			return this.getImageAspectRatio(photo).then(ratio => {
-				return {
-					src: photo,
-					...ratio
-				}
-			})
+	fetchPhotos() {
+		const promises = photoSourse.map(photo => {
+			return this.getImageAspectRatio(photo).then(ratio => ({
+				src: photo,
+				...ratio
+			}))
 		})
-
 		Promise.all(promises).then(photos => {
-			console.log(photos)
 			this.setState({ photos })
 		})
 	}
 
 	getImageAspectRatio(imgUrl) {
+		let options = url.parse(imgUrl)
+		let chunks = []
+
 		return new Promise((resolve, reject) => {
-			let options = url.parse(imgUrl)
 			http.get(options, function(response) {
-				let chunks = []
 				response
 					.on('data', function(chunk) {
 						chunks.push(chunk)
@@ -59,12 +56,12 @@ class Foto extends Component {
 					.on('end', function() {
 						const buffer = Buffer.concat(chunks)
 						const size = sizeOf(buffer)
-						const imgRatio = ratio(size.width, size.height)
-						const ratioArray = imgRatio.split(':')
+						let ratio = ratioOf(size.width, size.height)
+						ratio = ratio.split(':')
 
 						resolve({
-							width: ratioArray[0],
-							height: ratioArray[1]
+							width: ratio[0],
+							height: ratio[1]
 						})
 					})
 			})

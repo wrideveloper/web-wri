@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 import { Element } from 'react-scroll'
 import 'semantic-ui-css/semantic.min.css'
+import 'react-owl-carousel2/src/owl.carousel.css'
+import 'react-owl-carousel2/src/owl.theme.default.css'
 
 import { Navigation } from './components'
-import { Beranda, Kegiatan, Foto } from './scenes'
+import { Beranda, Kegiatan, Foto, Video } from './scenes'
 
 class App extends Component {
-	menu = ['Beranda', 'Kegiatan', 'Foto', 'Video', 'Tentang Kami', 'Tim Kami']
+	menu = [
+		'Beranda',
+		'Kegiatan',
+		'Event',
+		'Foto',
+		'Video',
+		'Tentang Kami',
+		'Tim Kami'
+	]
 
 	render() {
 		return (
@@ -26,7 +36,7 @@ class App extends Component {
 				</Element>
 
 				<Element id="Video">
-					<Kegiatan />
+					<Video />
 				</Element>
 			</div>
 		)

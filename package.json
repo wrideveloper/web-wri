@@ -8,6 +8,7 @@
     "image-size": "^0.6.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-owl-carousel2": "^0.3.0",
     "react-parallax": "^1.8.0",
     "react-photo-gallery": "^6.1.2",
     "react-reveal": "^1.2.2",
