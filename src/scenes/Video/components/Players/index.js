@@ -5,7 +5,7 @@ import { height } from 'window-size'
 
 class Players extends Component {
 	state = {
-		videos: ['gQojMIhELvM', 'pkdgVYehiTE', 'ZS_kXvOeQ5Y', 'pgAvVxowaYU']
+		videos: ['gQojMIhELvM', 'pkdgVYehiTE', 'ZS_kXvOeQ5Y']
 	}
 
 	playerOpts = {
@@ -16,7 +16,7 @@ class Players extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Grid columns="2" divided>
+				<Grid columns="2">
 					<Grid.Row>
 						<Grid.Column width="12">
 							<Youtube
@@ -26,15 +26,15 @@ class Players extends Component {
 						</Grid.Column>
 						<Grid.Column width="4">
 							<Youtube
+								videoId={this.state.videos[0]}
+								opts={{ ...this.playerOpts }}
+							/>
+							<Youtube
 								videoId={this.state.videos[1]}
 								opts={{ ...this.playerOpts }}
 							/>
 							<Youtube
 								videoId={this.state.videos[2]}
-								opts={{ ...this.playerOpts }}
-							/>
-							<Youtube
-								videoId={this.state.videos[3]}
 								opts={{ ...this.playerOpts }}
 							/>
 						</Grid.Column>

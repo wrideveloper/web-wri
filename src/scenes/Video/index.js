@@ -8,11 +8,11 @@ class Video extends Component {
 	render() {
 		return (
 			<Section>
-				<Grid columns="2">
-					<Grid.Column width="10">
+				<Grid columns="2" divided verticalAlign="middle">
+					<Grid.Column width="11">
 						<Players />
 					</Grid.Column>
-					<Grid.Column width="6">
+					<Grid.Column width="5">
 						<Info />
 					</Grid.Column>
 				</Grid>
