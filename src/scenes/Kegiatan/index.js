@@ -8,11 +8,11 @@ class Identitas extends Component {
 		return (
 			<Section>
 				<Grid columns="2" padded>
-					<Grid.Column width="6">
+					<Grid.Column width="7">
 						<PenjelasanKomunitas />
 					</Grid.Column>
 					<Grid.Column width="1" />
-					<Grid.Column width="7">
+					<Grid.Column width="8">
 						<DaftarKegiatan />
 					</Grid.Column>
 				</Grid>

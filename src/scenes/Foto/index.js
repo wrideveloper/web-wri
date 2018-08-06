@@ -3,6 +3,7 @@ import { Grid, Button, Icon } from 'semantic-ui-react'
 import { Section, SectionTitle } from '../../components'
 import Gallery from 'react-photo-gallery'
 import ImageComponent from './components/ImageComponent'
+import Fade from 'react-reveal/Fade'
 
 import url from 'url'
 import http from 'http'
@@ -73,15 +74,17 @@ class Foto extends Component {
 			<Section bgImage={require('./images/background.jpg')}>
 				<Grid columns="1">
 					<Grid.Column>
-						<Button
-							icon
-							labelPosition="left"
-							color="pink"
-							size="huge"
-							floated="right">
-							<Icon name="instagram" />
-							Selengkapnya
-						</Button>
+						<Fade right>
+							<Button
+								icon
+								labelPosition="left"
+								color="pink"
+								size="huge"
+								floated="right">
+								<Icon name="instagram" />
+								Selengkapnya
+							</Button>
+						</Fade>
 						<SectionTitle
 							title="Foto Kegiatan"
 							description="Lorem ipsum dolor sit amet"

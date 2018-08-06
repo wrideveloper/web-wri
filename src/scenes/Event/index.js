@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Section, SectionTitle } from '../../components'
 import { Grid, Image, Button, Icon } from 'semantic-ui-react'
 import OwlCarousel from 'react-owl-carousel2'
+import Zoom from 'react-reveal/Zoom'
+import Fade from 'react-reveal/Fade'
 
 class Event extends Component {
 	state = {
@@ -23,24 +25,28 @@ class Event extends Component {
 
 	renderEvents() {
 		return this.state.events.map((event, index) => (
-			<Image src={event} key={index} fluid bordered />
+			<Zoom>
+				<Image src={event} key={index} fluid bordered />
+			</Zoom>
 		))
 	}
 
 	render() {
 		return (
-			<Section inverted={true} bordered>
+			<Section bordered>
 				<Grid columns="1">
 					<Grid.Column>
-						<Button
-							icon
-							labelPosition="left"
-							color="orange"
-							size="huge"
-							floated="right">
-							<Icon name="calendar alternate outline" />
-							Selengkapnya
-						</Button>
+						<Fade right>
+							<Button
+								icon
+								labelPosition="left"
+								color="orange"
+								size="huge"
+								floated="right">
+								<Icon name="calendar alternate outline" />
+								Selengkapnya
+							</Button>
+						</Fade>
 						<SectionTitle
 							title="Event Kami"
 							description="Lorem ipsum dolor sit amet"

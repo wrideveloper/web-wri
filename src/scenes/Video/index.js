@@ -7,7 +7,7 @@ class Video extends Component {
 	state = {}
 	render() {
 		return (
-			<Section>
+			<Section fluid>
 				<Grid columns="2" divided verticalAlign="middle">
 					<Grid.Column width="11">
 						<Players />

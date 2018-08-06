@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import Youtube from 'react-youtube'
 import { Grid } from 'semantic-ui-react'
-import { height } from 'window-size'
+import Zoom from 'react-reveal/Zoom'
 
 class Players extends Component {
 	state = {
@@ -19,24 +19,34 @@ class Players extends Component {
 				<Grid columns="2">
 					<Grid.Row>
 						<Grid.Column width="12">
-							<Youtube
-								videoId={this.state.videos[0]}
-								opts={{ ...this.playerOpts, height: '100%' }}
-							/>
+							<Zoom>
+								<Youtube
+									videoId={this.state.videos[0]}
+									opts={{ ...this.playerOpts, height: 460 }}
+								/>
+							</Zoom>
 						</Grid.Column>
 						<Grid.Column width="4">
-							<Youtube
-								videoId={this.state.videos[0]}
-								opts={{ ...this.playerOpts }}
-							/>
-							<Youtube
-								videoId={this.state.videos[1]}
-								opts={{ ...this.playerOpts }}
-							/>
-							<Youtube
-								videoId={this.state.videos[2]}
-								opts={{ ...this.playerOpts }}
-							/>
+							<Zoom>
+								<Youtube
+									videoId={this.state.videos[0]}
+									opts={this.playerOpts}
+								/>
+							</Zoom>
+
+							<Zoom>
+								<Youtube
+									videoId={this.state.videos[1]}
+									opts={this.playerOpts}
+								/>
+							</Zoom>
+
+							<Zoom>
+								<Youtube
+									videoId={this.state.videos[2]}
+									opts={this.playerOpts}
+								/>
+							</Zoom>
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>

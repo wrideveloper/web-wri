@@ -4,9 +4,12 @@ import { Grid, Container } from 'semantic-ui-react'
 import { Parallax } from 'react-parallax'
 import styled from 'styled-components'
 
-const InnerContainer = styled(Grid)`
+const InnerContainer = styled(Container)`
+	padding: ${props => (props.fluid ? 30 : 0)}px;
 	padding-top: 60px !important;
 	padding-bottom: 60px !important;
+	border-top: ${props =>
+		props.bordered ? 'dashed 2px #a3a3a3 !important' : ''};
 `
 
 class Section extends Component {
@@ -14,7 +17,8 @@ class Section extends Component {
 		blur: PropTypes.number,
 		bgImage: PropTypes.string,
 		strength: PropTypes.number,
-		bordered: PropTypes.bool
+		bordered: PropTypes.bool,
+		fluid: PropTypes.bool
 	}
 
 	render() {
@@ -24,15 +28,9 @@ class Section extends Component {
 				blur={this.props.blur}
 				bgImage={this.props.bgImage}
 				strength={this.props.strength}>
-				<Container fluid>
-					<InnerContainer
-						padded
-						style={{
-							borderTop: this.props.bordered ? 'dashed 2px #a3a3a3' : ''
-						}}>
-						{this.props.children}
-					</InnerContainer>
-				</Container>
+				<InnerContainer bordered={this.props.bordered} fluid={this.props.fluid}>
+					{this.props.children}
+				</InnerContainer>
 			</Parallax>
 		)
 	}
