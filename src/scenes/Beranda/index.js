@@ -12,8 +12,8 @@ class Beranda extends Component {
 				bgImage={require('./images/background.jpg')}
 				blur={1}
 				strength={200}>
-				<Grid columns={2} verticalAlign="middle" textAlign="right">
-					<Grid.Column>
+				<Grid columns={2} verticalAlign="middle">
+					<Grid.Column width="7" textAlign="right">
 						<Fade left>
 							<SectionText text="Ingin Belajar" size="medium" />
 							<SectionText text="PEMROGRAMAN" size="massive" bold />
@@ -26,7 +26,7 @@ class Beranda extends Component {
 							</Link>
 						</Fade>
 					</Grid.Column>
-					<Grid.Column>
+					<Grid.Column width="9" textAlign="center">
 						<Youtube videoId="slV8Hr3HJUU" />
 					</Grid.Column>
 				</Grid>

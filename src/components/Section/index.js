@@ -6,8 +6,8 @@ import styled from 'styled-components'
 
 const InnerContainer = styled(Container)`
 	padding: ${props => (props.fluid ? 30 : 0)}px;
-	padding-top: 60px !important;
-	padding-bottom: 60px !important;
+	padding-top: 77px !important;
+	padding-bottom: 77px !important;
 	border-top: ${props =>
 		props.bordered ? 'dashed 2px #a3a3a3 !important' : ''};
 `
