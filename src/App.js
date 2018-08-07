@@ -29,8 +29,6 @@ class App extends Component {
 		<Kontak />
 	]
 
-	scenePositions = [0, 519, 946, 1471, 2448, 3012, 3600]
-
 	renderScenes() {
 		return this.scenes.map((scene, index) => {
 			return (
@@ -44,7 +42,7 @@ class App extends Component {
 	render() {
 		return (
 			<div style={styles.container}>
-				<Navigation menu={this.menu} scenePositions={this.scenePositions} />
+				<Navigation menu={this.menu} />
 				{this.renderScenes()}
 				<Footer />
 			</div>

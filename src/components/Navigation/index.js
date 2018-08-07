@@ -15,7 +15,6 @@ const Logo = styled(Image)`
 
 class Navigator extends Component {
 	state = {
-		activeMenu: 'Beranda',
 		isMenuTransparent: true
 	}
 
@@ -30,25 +29,12 @@ class Navigator extends Component {
 	handleScroll = event => {
 		const scrollPosition = window.scrollY
 		this.setMenuTransparency(scrollPosition)
-		this.setActiveMenuOnScroll(scrollPosition)
 	}
 
 	setMenuTransparency(scrollPosition) {
 		this.setState({
 			isMenuTransparent: scrollPosition > 60 ? false : true
 		})
-	}
-
-	setActiveMenuOnScroll(scrollPosition) {
-		console.log(scrollPosition)
-		this.props.scenePositions.forEach((position, index) => {
-			if (position <= scrollPosition)
-				this.changeActiveMenu(this.props.menu[index])
-		})
-	}
-
-	changeActiveMenu(menu) {
-		this.setState({ activeMenu: menu })
 	}
 
 	scrollTo(element) {
@@ -60,17 +46,12 @@ class Navigator extends Component {
 		})
 	}
 
-	isMenuActive(menu) {
-		return menu === this.state.activeMenu
-	}
-
 	renderMenu() {
 		return this.props.menu.map((item, index) => (
 			<Menu.Item
 				key={index}
 				name={item}
 				link
-				active={this.isMenuActive(item)}
 				onClick={() => this.scrollTo(item)}
 			/>
 		))
