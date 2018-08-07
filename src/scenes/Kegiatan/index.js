@@ -3,7 +3,7 @@ import { Section } from '../../components'
 import { Grid } from 'semantic-ui-react'
 import { PenjelasanKomunitas, DaftarKegiatan } from './components'
 
-class Identitas extends Component {
+class Kegiatan extends Component {
 	render() {
 		return (
 			<Section>
@@ -21,4 +21,4 @@ class Identitas extends Component {
 	}
 }
 
-export default Identitas
+export default Kegiatan

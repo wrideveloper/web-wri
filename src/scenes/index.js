@@ -4,5 +4,6 @@ import Event from './Event'
 import Foto from './Foto'
 import Video from './Video'
 import Tim from './Tim'
+import Kontak from './Kontak'
 
-export { Beranda, Kegiatan, Event, Foto, Video, Tim }
+export { Beranda, Kegiatan, Event, Foto, Video, Tim, Kontak }

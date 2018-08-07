@@ -9,13 +9,21 @@ class SectionTitle extends Component {
 		icon: PropTypes.string,
 		title: PropTypes.string.isRequired,
 		description: PropTypes.string,
-		inverted: PropTypes.bool
+		inverted: PropTypes.bool,
+		size: PropTypes.string
+	}
+
+	static defaultProps = {
+		size: 'huge'
 	}
 
 	render() {
 		return (
 			<Fragment>
-				<Header size="huge" color="orange" inverted={this.props.inverted}>
+				<Header
+					size={this.props.size}
+					color="orange"
+					inverted={this.props.inverted}>
 					<Icon
 						name={this.props.icon}
 						color="orange"

@@ -5,10 +5,10 @@ import 'react-owl-carousel2/src/owl.carousel.css'
 import 'react-owl-carousel2/src/owl.theme.default.css'
 
 import { Navigation } from './components'
-import { Beranda, Kegiatan, Event, Foto, Video, Tim } from './scenes'
+import { Beranda, Kegiatan, Event, Foto, Video, Tim, Kontak } from './scenes'
 
 class App extends Component {
-	menu = ['Beranda', 'Kegiatan', 'Event', 'Foto', 'Video', 'Tim Kami']
+	menu = ['Beranda', 'Kegiatan', 'Event', 'Foto', 'Video', 'Tim Kami', 'Kontak']
 
 	render() {
 		return (
@@ -37,6 +37,10 @@ class App extends Component {
 
 				<Element id="Tim Kami">
 					<Tim />
+				</Element>
+
+				<Element id="Kontak">
+					<Kontak />
 				</Element>
 			</div>
 		)
