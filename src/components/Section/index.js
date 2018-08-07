@@ -1,13 +1,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Grid, Container } from 'semantic-ui-react'
+import { Container } from 'semantic-ui-react'
 import { Parallax } from 'react-parallax'
 import styled from 'styled-components'
 
+const OuterContainer = styled(Container)`
+	background-color: ${props =>
+		props.bgImage === undefined ? '' : 'rgba(0, 0, 0, 0.6)'};
+`
+
 const InnerContainer = styled(Container)`
 	padding: ${props => (props.fluid ? 30 : 0)}px;
-	padding-top: 77px !important;
-	padding-bottom: 77px !important;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	border-top: ${props =>
 		props.bordered ? 'dashed 2px #a3a3a3 !important' : ''};
 `
@@ -22,15 +27,18 @@ class Section extends Component {
 	}
 
 	render() {
-		console.log(this.props.bgImage)
 		return (
 			<Parallax
 				blur={this.props.blur}
 				bgImage={this.props.bgImage}
 				strength={this.props.strength}>
-				<InnerContainer bordered={this.props.bordered} fluid={this.props.fluid}>
-					{this.props.children}
-				</InnerContainer>
+				<OuterContainer fluid bgImage={this.props.bgImage}>
+					<InnerContainer
+						bordered={this.props.bordered}
+						fluid={this.props.fluid}>
+						{this.props.children}
+					</InnerContainer>
+				</OuterContainer>
 			</Parallax>
 		)
 	}

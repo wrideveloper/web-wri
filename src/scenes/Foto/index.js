@@ -71,7 +71,7 @@ class Foto extends Component {
 
 	render() {
 		return (
-			<Section bgImage={require('./images/background.jpg')}>
+			<Section bgImage={require('./images/background.jpg')} strength={200}>
 				<Grid columns="1">
 					<Grid.Column>
 						<Fade right>

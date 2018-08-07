@@ -4,15 +4,23 @@ import { Section, SectionText } from '../../components'
 import Youtube from 'react-youtube'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
+import styled from 'styled-components'
+
+const BerandaGrid = styled(Grid)`
+	padding-top: 55px !important;
+	padding-bottom: 55px !important;
+`
+
+const YoutubePlayer = styled(Youtube)`
+	border: solid 2px white;
+	border-radius: 5px;
+`
 
 class Beranda extends Component {
 	render() {
 		return (
-			<Section
-				bgImage={require('./images/background.jpg')}
-				blur={1}
-				strength={200}>
-				<Grid columns={2} verticalAlign="middle">
+			<Section bgImage={require('./images/background.jpg')} strength={200}>
+				<BerandaGrid columns={2} verticalAlign="middle">
 					<Grid.Column width="7" textAlign="right">
 						<Fade left>
 							<SectionText text="Ingin Belajar" size="medium" />
@@ -27,9 +35,9 @@ class Beranda extends Component {
 						</Fade>
 					</Grid.Column>
 					<Grid.Column width="9" textAlign="center">
-						<Youtube videoId="slV8Hr3HJUU" />
+						<YoutubePlayer videoId="slV8Hr3HJUU" />
 					</Grid.Column>
-				</Grid>
+				</BerandaGrid>
 			</Section>
 		)
 	}

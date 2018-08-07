@@ -3,6 +3,10 @@ import { Menu, Image } from 'semantic-ui-react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
 
+const TransparentMenu = styled(Menu)`
+	background-color: rgba(0, 0, 0, 0) !important;
+`
+
 const Logo = styled(Image)`
 	margin-right: 15px;
 `
