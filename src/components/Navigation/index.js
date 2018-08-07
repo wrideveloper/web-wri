@@ -4,7 +4,9 @@ import { scroller } from 'react-scroll'
 import styled from 'styled-components'
 
 const TransparentMenu = styled(Menu)`
-	background-color: rgba(0, 0, 0, 0) !important;
+	background-color: ${props =>
+		props.transparent ? 'rgba(0, 0, 0, 0) !important' : ''};
+	transition: all 0.3s;
 `
 
 const Logo = styled(Image)`
@@ -13,7 +15,44 @@ const Logo = styled(Image)`
 
 class Navigator extends Component {
 	state = {
-		activeMenu: 'Beranda'
+		activeMenu: 'Beranda',
+		isMenuTransparent: true
+	}
+
+	componentDidMount() {
+		window.addEventListener('scroll', this.handleScroll)
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll')
+	}
+
+	handleScroll = event => {
+		const scrollPosition = window.scrollY
+		this.setMenuTransparency(scrollPosition)
+	}
+
+	setMenuTransparency(scrollPosition) {
+		this.setState({
+			isMenuTransparent: scrollPosition > 60 ? false : true
+		})
+	}
+
+	scrollTo(element) {
+		scroller.scrollTo(element, {
+			duration: 800,
+			delay: 0,
+			smooth: 'easeInOut',
+			offset: -74
+		})
+	}
+
+	isMenuActive(menu) {
+		return menu === this.state.activeMenu
+	}
+
+	changeActiveMenu(menu) {
+		this.setState({ activeMenu: menu })
 	}
 
 	renderMenu() {
@@ -31,32 +70,20 @@ class Navigator extends Component {
 		))
 	}
 
-	isMenuActive(menu) {
-		return menu === this.state.activeMenu
-	}
-
-	changeActiveMenu(menu) {
-		this.setState({ activeMenu: menu })
-	}
-
-	scrollTo(element) {
-		scroller.scrollTo(element, {
-			duration: 800,
-			delay: 0,
-			smooth: 'easeInOut',
-			offset: -74
-		})
-	}
-
 	render() {
 		return (
-			<Menu size="massive" borderless fixed="top" inverted>
+			<TransparentMenu
+				size="massive"
+				borderless
+				fixed="top"
+				inverted
+				transparent={this.state.isMenuTransparent}>
 				<Menu.Item header onClick={() => this.scrollToTop()}>
 					<Logo src={require('./images/logo wri.png')} size="mini" />
 					Workshop Riset Informatika
 				</Menu.Item>
 				<Menu.Menu position="right">{this.renderMenu()}</Menu.Menu>
-			</Menu>
+			</TransparentMenu>
 		)
 	}
 }
