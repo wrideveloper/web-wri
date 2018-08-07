@@ -34,28 +34,31 @@ class Event extends Component {
 	render() {
 		return (
 			<Section bordered>
-				<Grid columns="1">
-					<Grid.Column>
-						<Fade right>
-							<Button
-								icon
-								labelPosition="left"
-								color="orange"
-								size="huge"
-								floated="right">
-								<Icon name="calendar alternate outline" />
-								Selengkapnya
-							</Button>
-						</Fade>
-						<SectionTitle
-							title="Event Kami"
-							description="Lorem ipsum dolor sit amet"
-							icon="calendar alternate outline"
-						/>
-						<OwlCarousel options={this.carouselOptions}>
-							{this.renderEvents()}
-						</OwlCarousel>
-					</Grid.Column>
+				<Grid columns="2">
+					<Grid.Row>
+						<Grid.Column>
+							<SectionTitle
+								title="Event Kami"
+								description="Lorem ipsum dolor sit amet"
+								icon="calendar alternate outline"
+							/>
+						</Grid.Column>
+						<Grid.Column textAlign="right">
+							<Fade right>
+								<Button icon labelPosition="left" color="green" size="huge">
+									<Icon name="calendar alternate outline" />
+									Selengkapnya
+								</Button>
+							</Fade>
+						</Grid.Column>
+					</Grid.Row>
+					<Grid.Row>
+						<Grid.Column width="16">
+							<OwlCarousel options={this.carouselOptions}>
+								{this.renderEvents()}
+							</OwlCarousel>
+						</Grid.Column>
+					</Grid.Row>
 				</Grid>
 			</Section>
 		)

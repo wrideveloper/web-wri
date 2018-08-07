@@ -13,11 +13,15 @@ class SectionTitle extends Component {
 	}
 
 	render() {
-		console.log('inverted ? ', this.props.inverted)
 		return (
 			<Fragment>
 				<Header size="huge" color="orange" inverted={this.props.inverted}>
-					<Icon name={this.props.icon} circular />
+					<Icon
+						name={this.props.icon}
+						color="orange"
+						circular
+						inverted={this.props.inverted}
+					/>
 
 					<Header.Content>
 						<Zoom>

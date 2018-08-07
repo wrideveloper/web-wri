@@ -72,25 +72,26 @@ class Foto extends Component {
 	render() {
 		return (
 			<Section bgImage={require('./images/background.jpg')} strength={200}>
-				<Grid columns="1">
-					<Grid.Column>
-						<Fade right>
-							<Button
-								icon
-								labelPosition="left"
-								color="pink"
-								size="huge"
-								floated="right">
-								<Icon name="instagram" />
-								Selengkapnya
-							</Button>
-						</Fade>
-						<SectionTitle
-							title="Foto Kegiatan"
-							description="Lorem ipsum dolor sit amet"
-							icon="instagram"
-							inverted
-						/>
+				<Grid columns="2">
+					<Grid.Row>
+						<Grid.Column>
+							<SectionTitle
+								title="Foto Kegiatan"
+								description="Lorem ipsum dolor sit amet"
+								icon="instagram"
+								inverted
+							/>
+						</Grid.Column>
+						<Grid.Column textAlign="right">
+							<Fade right>
+								<Button icon labelPosition="left" color="green" size="huge">
+									<Icon name="instagram" />
+									Selengkapnya
+								</Button>
+							</Fade>
+						</Grid.Column>
+					</Grid.Row>
+					<Grid.Column width="16">
 						<Gallery
 							photos={this.state.photos}
 							columns={4}
