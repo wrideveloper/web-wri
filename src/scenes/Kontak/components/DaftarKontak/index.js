@@ -1,20 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import { SectionTitle } from '../../../../components'
-import { Header, Icon, Grid } from 'semantic-ui-react'
-import Zoom from 'react-reveal/Zoom'
-
-const Item = ({ title, icon, description, color }) => (
-	<Header size="tiny">
-		<Icon name={icon} circular color={color} inverted />
-
-		<Header.Content>
-			<Zoom>
-				{title}
-				<Header.Subheader>{description}</Header.Subheader>
-			</Zoom>
-		</Header.Content>
-	</Header>
-)
+import { SectionTitle, SectionItem } from '../../../../components'
+import { Grid } from 'semantic-ui-react'
 
 class DaftarKontak extends Component {
 	render() {
@@ -30,25 +16,28 @@ class DaftarKontak extends Component {
 				<Grid columns="2">
 					<Grid.Row>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="Email"
 								icon="mail"
 								description="wripolinema@gmail.com"
 								color="red"
+								size="tiny"
 							/>
-							<Item
+							<SectionItem
 								title="Whatsapp"
 								icon="whatsapp"
 								description="+6285331247098"
 								color="green"
+								size="tiny"
 							/>
 						</Grid.Column>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="Alamat"
 								icon="map"
 								description="Polinema"
 								color="blue"
+								size="tiny"
 							/>
 						</Grid.Column>
 					</Grid.Row>

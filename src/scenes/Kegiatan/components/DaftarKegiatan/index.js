@@ -1,20 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import { SectionTitle } from '../../../../components'
-import { Header, Icon, Grid } from 'semantic-ui-react'
-import Zoom from 'react-reveal/Zoom'
-
-const Item = ({ title, icon, description }) => (
-	<Header size="small">
-		<Icon name={icon} circular inverted />
-
-		<Header.Content>
-			<Zoom>
-				{title}
-				<Header.Subheader>{description}</Header.Subheader>
-			</Zoom>
-		</Header.Content>
-	</Header>
-)
+import { SectionTitle, SectionItem } from '../../../../components'
+import { Grid } from 'semantic-ui-react'
 
 class DaftarKegiatan extends Component {
 	render() {
@@ -29,49 +15,55 @@ class DaftarKegiatan extends Component {
 				<Grid columns="2">
 					<Grid.Row>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="Workshop"
 								icon="setting"
 								description="Lorem ipsum dolor sit amet"
+								size="small"
 							/>
 						</Grid.Column>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="Riset"
 								icon="laptop"
 								description="Lorem ipsum dolor sit amet"
+								size="small"
 							/>
 						</Grid.Column>
 					</Grid.Row>
 					<Grid.Row>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="Miniclass"
 								icon="book"
 								description="Lorem ipsum dolor sit amet"
+								size="small"
 							/>
 						</Grid.Column>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="Hackaton"
 								icon="keyboard"
 								description="Lorem ipsum dolor sit amet"
+								size="small"
 							/>
 						</Grid.Column>
 					</Grid.Row>
 					<Grid.Row>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="Code In The Dark"
 								icon="blind"
 								description="Lorem ipsum dolor sit amet"
+								size="small"
 							/>
 						</Grid.Column>
 						<Grid.Column>
-							<Item
+							<SectionItem
 								title="OpenTalk"
 								icon="volume up"
 								description="Lorem ipsum dolor sit amet"
+								size="small"
 							/>
 						</Grid.Column>
 					</Grid.Row>
