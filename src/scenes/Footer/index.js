@@ -22,7 +22,7 @@ class Footer extends Component {
 			<Fragment>
 				<TopSection>
 					<Container>
-						<Grid columns="3" verticalAlign="middle">
+						<Grid columns="3" verticalAlign="middle" doubling>
 							<Grid.Column width="4">
 								<Image src={require('./images/logo.png')} fluid />
 							</Grid.Column>

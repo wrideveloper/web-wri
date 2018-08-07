@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Image } from 'semantic-ui-react'
+import { Menu, Image, Grid } from 'semantic-ui-react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
 
@@ -47,6 +47,10 @@ class Navigator extends Component {
 		})
 	}
 
+	changeActiveMenu(menu) {
+		this.setState({ activeMenu: menu })
+	}
+
 	scrollTo(element) {
 		scroller.scrollTo(element, {
 			duration: 800,
@@ -60,10 +64,6 @@ class Navigator extends Component {
 		return menu === this.state.activeMenu
 	}
 
-	changeActiveMenu(menu) {
-		this.setState({ activeMenu: menu })
-	}
-
 	renderMenu() {
 		return this.props.menu.map((item, index) => (
 			<Menu.Item
@@ -71,28 +71,30 @@ class Navigator extends Component {
 				name={item}
 				link
 				active={this.isMenuActive(item)}
-				onClick={() => {
-					this.changeActiveMenu(item)
-					this.scrollTo(item)
-				}}
+				onClick={() => this.scrollTo(item)}
 			/>
 		))
 	}
 
 	render() {
 		return (
-			<TransparentMenu
-				size="massive"
-				borderless
-				fixed="top"
-				inverted
-				transparent={this.state.isMenuTransparent}>
-				<Menu.Item header onClick={() => this.scrollToTop()}>
-					<Logo src={require('./images/logo wri.png')} size="mini" />
-					Workshop Riset Informatika
-				</Menu.Item>
-				<Menu.Menu position="right">{this.renderMenu()}</Menu.Menu>
-			</TransparentMenu>
+			<Grid columns="1">
+				<Grid.Column only="computer">
+					<TransparentMenu
+						size="massive"
+						borderless
+						fixed="top"
+						inverted
+						transparent={this.state.isMenuTransparent}
+						stackable>
+						<Menu.Item header>
+							<Logo src={require('./images/logo wri.png')} size="mini" />
+							Workshop Riset Informatika
+						</Menu.Item>
+						<Menu.Menu position="right">{this.renderMenu()}</Menu.Menu>
+					</TransparentMenu>
+				</Grid.Column>
+			</Grid>
 		)
 	}
 }

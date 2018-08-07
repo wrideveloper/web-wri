@@ -72,7 +72,7 @@ class Foto extends Component {
 	render() {
 		return (
 			<Section bgImage={require('./images/background.jpg')} strength={200}>
-				<Grid columns="2">
+				<Grid columns="2" doubling>
 					<Grid.Row>
 						<Grid.Column>
 							<SectionTitle

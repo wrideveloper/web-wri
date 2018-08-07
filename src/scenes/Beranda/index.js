@@ -14,14 +14,16 @@ const BerandaGrid = styled(Grid)`
 const YoutubePlayer = styled(Youtube)`
 	border: solid 2px white;
 	border-radius: 5px;
+	width: 100%;
+	min-height: auto;
 `
 
 class Beranda extends Component {
 	render() {
 		return (
 			<Section bgImage={require('./images/background.jpg')} strength={200}>
-				<BerandaGrid columns={2} verticalAlign="middle">
-					<Grid.Column width="7" textAlign="right">
+				<BerandaGrid columns={2} verticalAlign="middle" doubling>
+					<Grid.Column width="7" textAlign="right" only="computer">
 						<Fade left>
 							<SectionText text="Ingin Belajar" size="medium" />
 							<SectionText text="PEMROGRAMAN" size="massive" bold />

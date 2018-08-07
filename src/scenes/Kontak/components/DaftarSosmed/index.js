@@ -13,7 +13,7 @@ class DaftarSosmed extends Component {
 					size="medium"
 				/>
 
-				<Grid columns="2">
+				<Grid columns="2" stackable>
 					<Grid.Row>
 						<Grid.Column>
 							<SectionItem

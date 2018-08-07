@@ -34,7 +34,7 @@ class Event extends Component {
 	render() {
 		return (
 			<Section bordered>
-				<Grid columns="2">
+				<Grid columns="2" doubling>
 					<Grid.Row>
 						<Grid.Column>
 							<SectionTitle

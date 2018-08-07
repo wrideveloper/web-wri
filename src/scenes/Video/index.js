@@ -8,11 +8,11 @@ class Video extends Component {
 	render() {
 		return (
 			<Section fluid>
-				<Grid columns="2" divided verticalAlign="middle">
-					<Grid.Column width="11">
+				<Grid columns="2" divided verticalAlign="middle" doubling reversed>
+					<Grid.Column width="9">
 						<Players />
 					</Grid.Column>
-					<Grid.Column width="5">
+					<Grid.Column width="7">
 						<Info />
 					</Grid.Column>
 				</Grid>

@@ -12,7 +12,7 @@ class DaftarKegiatan extends Component {
 					description="lorem ipsum dolor sit amet"
 				/>
 
-				<Grid columns="2">
+				<Grid columns="2" doubling>
 					<Grid.Row>
 						<Grid.Column>
 							<SectionItem
