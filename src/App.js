@@ -19,39 +19,33 @@ import {
 class App extends Component {
 	menu = ['Beranda', 'Kegiatan', 'Event', 'Foto', 'Video', 'Tim Kami', 'Kontak']
 
+	scenes = [
+		<Beranda />,
+		<Kegiatan />,
+		<Event />,
+		<Foto />,
+		<Video />,
+		<Tim />,
+		<Kontak />
+	]
+
+	scenePositions = [0, 519, 946, 1471, 2448, 3012, 3600]
+
+	renderScenes() {
+		return this.scenes.map((scene, index) => {
+			return (
+				<Element id={this.menu[index]} key={index}>
+					{scene}
+				</Element>
+			)
+		})
+	}
+
 	render() {
 		return (
 			<div style={styles.container}>
-				<Navigation menu={this.menu} />
-
-				<Element id="Beranda">
-					<Beranda />
-				</Element>
-
-				<Element id="Kegiatan">
-					<Kegiatan />
-				</Element>
-
-				<Element id="Event">
-					<Event />
-				</Element>
-
-				<Element id="Foto">
-					<Foto />
-				</Element>
-
-				<Element id="Video">
-					<Video />
-				</Element>
-
-				<Element id="Tim Kami">
-					<Tim />
-				</Element>
-
-				<Element id="Kontak">
-					<Kontak />
-				</Element>
-
+				<Navigation menu={this.menu} scenePositions={this.scenePositions} />
+				{this.renderScenes()}
 				<Footer />
 			</div>
 		)

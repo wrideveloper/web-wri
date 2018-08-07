@@ -30,11 +30,20 @@ class Navigator extends Component {
 	handleScroll = event => {
 		const scrollPosition = window.scrollY
 		this.setMenuTransparency(scrollPosition)
+		this.setActiveMenuOnScroll(scrollPosition)
 	}
 
 	setMenuTransparency(scrollPosition) {
 		this.setState({
 			isMenuTransparent: scrollPosition > 60 ? false : true
+		})
+	}
+
+	setActiveMenuOnScroll(scrollPosition) {
+		console.log(scrollPosition)
+		this.props.scenePositions.forEach((position, index) => {
+			if (position <= scrollPosition)
+				this.changeActiveMenu(this.props.menu[index])
 		})
 	}
 
