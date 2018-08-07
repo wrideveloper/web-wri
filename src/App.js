@@ -5,7 +5,16 @@ import 'react-owl-carousel2/src/owl.carousel.css'
 import 'react-owl-carousel2/src/owl.theme.default.css'
 
 import { Navigation } from './components'
-import { Beranda, Kegiatan, Event, Foto, Video, Tim, Kontak } from './scenes'
+import {
+	Beranda,
+	Kegiatan,
+	Event,
+	Foto,
+	Video,
+	Tim,
+	Kontak,
+	Footer
+} from './scenes'
 
 class App extends Component {
 	menu = ['Beranda', 'Kegiatan', 'Event', 'Foto', 'Video', 'Tim Kami', 'Kontak']
@@ -42,6 +51,8 @@ class App extends Component {
 				<Element id="Kontak">
 					<Kontak />
 				</Element>
+
+				<Footer />
 			</div>
 		)
 	}

@@ -25,8 +25,8 @@ class Event extends Component {
 
 	renderEvents() {
 		return this.state.events.map((event, index) => (
-			<Zoom>
-				<Image src={event} key={index} fluid bordered />
+			<Zoom key={index}>
+				<Image src={event} fluid bordered />
 			</Zoom>
 		))
 	}
