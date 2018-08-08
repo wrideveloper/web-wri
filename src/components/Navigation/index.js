@@ -69,7 +69,7 @@ class Navigator extends Component {
 						transparent={this.state.isMenuTransparent}
 						stackable>
 						<Menu.Item header>
-							<Logo src={require('./images/logo wri.png')} size="mini" />
+							<Logo src={require('./images/logo.png')} size="mini" />
 							Workshop Riset Informatika
 						</Menu.Item>
 						<Menu.Menu position="right">{this.renderMenu()}</Menu.Menu>

@@ -7,11 +7,11 @@ class Kontak extends Component {
 	render() {
 		return (
 			<Section>
-				<Grid columns="2" padded doubling>
-					<Grid.Column style={{ borderRight: 'dashed 2px #6D6D6D' }} width="8">
+				<Grid columns="2" doubling relaxed="very">
+					<Grid.Column style={{ borderRight: 'dashed 2px #a3a3a3' }} width="7">
 						<DaftarKontak />
 					</Grid.Column>
-					<Grid.Column width="8">
+					<Grid.Column>
 						<DaftarSosmed />
 					</Grid.Column>
 				</Grid>

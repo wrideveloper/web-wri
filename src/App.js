@@ -30,29 +30,21 @@ class App extends Component {
 	]
 
 	renderScenes() {
-		return this.scenes.map((scene, index) => {
-			return (
-				<Element id={this.menu[index]} key={index}>
-					{scene}
-				</Element>
-			)
-		})
+		return this.scenes.map((scene, index) => (
+			<Element id={this.menu[index]} key={index}>
+				{scene}
+			</Element>
+		))
 	}
 
 	render() {
 		return (
-			<div style={styles.container}>
+			<div>
 				<Navigation menu={this.menu} />
 				{this.renderScenes()}
 				<Footer />
 			</div>
 		)
-	}
-}
-
-const styles = {
-	container: {
-		marginTop: 0
 	}
 }
 

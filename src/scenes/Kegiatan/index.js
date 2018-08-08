@@ -7,11 +7,10 @@ class Kegiatan extends Component {
 	render() {
 		return (
 			<Section>
-				<Grid columns="2" padded doubling>
-					<Grid.Column width="7">
+				<Grid columns="2" relaxed="very" doubling>
+					<Grid.Column width="8">
 						<PenjelasanKomunitas />
 					</Grid.Column>
-					<Grid.Column width="1" />
 					<Grid.Column width="8">
 						<DaftarKegiatan />
 					</Grid.Column>

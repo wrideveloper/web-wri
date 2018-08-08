@@ -31,8 +31,7 @@ class Section extends Component {
 			<Parallax
 				blur={this.props.blur}
 				bgImage={this.props.bgImage}
-				strength={this.props.strength}
-				style={{ margin: 0 }}>
+				strength={this.props.strength}>
 				<OuterContainer fluid bgImage={this.props.bgImage}>
 					<InnerContainer
 						bordered={this.props.bordered}
