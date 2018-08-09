@@ -30,13 +30,14 @@ const ImageComponent = ({
 	left
 }) => {
 	adjustPosition(direction, left, top)
-
 	return (
 		<Zoom>
 			<div
 				style={{ margin, height: photo.height, width: photo.width, ...cont }}
 				className={!photo.selected ? 'not-selected' : ''}>
-				<img style={{ ...imgStyle }} {...photo} alt={index} />
+				<a href={photo.link}>
+					<img style={{ ...imgStyle }} {...photo} alt={index} />
+				</a>
 				<style>{`.not-selected:hover{outline:2px solid #06befa}`}</style>
 			</div>
 		</Zoom>

@@ -61,10 +61,12 @@ class Event extends Component {
 						</Grid.Column>
 						<Grid.Column textAlign="right">
 							<Fade right>
-								<Button icon labelPosition="left" color="green" size="huge">
-									<Icon name="calendar alternate outline" />
-									Selengkapnya
-								</Button>
+								<a href="https://www.eventbrite.com/o/workshop-riset-informatika-17325715953">
+									<Button icon labelPosition="left" color="green" size="huge">
+										<Icon name="calendar alternate outline" />
+										Selengkapnya
+									</Button>
+								</a>
 							</Fade>
 						</Grid.Column>
 					</Grid.Row>

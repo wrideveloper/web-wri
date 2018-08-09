@@ -25,7 +25,8 @@ const getImages = imagesData => {
 		return {
 			src: url,
 			width,
-			height
+			height,
+			link: imageData.link
 		}
 	})
 }
