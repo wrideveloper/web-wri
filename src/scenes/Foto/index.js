@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Grid, Button, Icon } from 'semantic-ui-react'
+import { Grid, Button } from 'semantic-ui-react'
 import { Section, SectionTitle } from '../../components'
 import Gallery from 'react-photo-gallery'
 import ImageComponent from './components/ImageComponent'
@@ -39,7 +39,6 @@ class Foto extends Component {
 							<Fade right>
 								<a href="https://www.instagram.com/wri_polinema/">
 									<Button
-										icon
 										labelPosition="left"
 										color="green"
 										size="huge"

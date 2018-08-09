@@ -7,8 +7,8 @@ import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
 const BerandaGrid = styled(Grid)`
-	padding-top: 55px !important;
-	padding-bottom: 55px !important;
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
 `
 
 const YoutubePlayer = styled(Youtube)`

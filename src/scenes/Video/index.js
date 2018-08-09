@@ -6,12 +6,12 @@ import { Info, Players } from './components'
 class Video extends Component {
 	render() {
 		return (
-			<Section fluid>
+			<Section>
 				<Grid columns="2" doubling relaxed="very">
-					<Grid.Column width="7" style={{ borderRight: 'dashed 2px #a3a3a3' }}>
+					<Grid.Column width="5" style={{ borderRight: 'dashed 2px #a3a3a3' }}>
 						<Info />
 					</Grid.Column>
-					<Grid.Column width="9">
+					<Grid.Column width="11">
 						<Players />
 					</Grid.Column>
 				</Grid>

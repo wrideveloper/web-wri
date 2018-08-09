@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import Youtube from 'react-youtube'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid, Image, Header } from 'semantic-ui-react'
 import Zoom from 'react-reveal/Zoom'
 import styled from 'styled-components'
 import Carousel from 'react-owl-carousel2'
+
+import { getRecentVideos } from '../../services/youtube'
 
 const YoutubePlayer = styled(Youtube)`
 	width: 100%;
@@ -12,46 +14,67 @@ const YoutubePlayer = styled(Youtube)`
 
 class Players extends Component {
 	state = {
-		videos: ['gQojMIhELvM', 'pkdgVYehiTE', 'ZS_kXvOeQ5Y']
+		videos: [],
+		active_video: '',
+		autoplay: 0
 	}
 
 	carouselOptions = {
-		items: 3,
+		items: 4,
 		nav: true,
 		rewind: true,
 		autoplay: true,
 		margin: 5
 	}
 
+	componentDidMount() {
+		getRecentVideos().then(videos =>
+			this.setState({ videos, active_video: videos[0] })
+		)
+	}
+
+	renderThumbnails() {
+		return this.state.videos.map((video, index) => (
+			<Zoom key={index}>
+				<div onClick={() => this.changeActiveVideo(video)}>
+					<Image src={video.thumbnail} />
+					<br />
+					<b>{video.title}</b>
+				</div>
+			</Zoom>
+		))
+	}
+
+	changeActiveVideo(video) {
+		this.setState({ active_video: video, autoplay: 1 })
+	}
+
 	render() {
+		console.log(this.state.videos)
 		return (
 			<Fragment>
 				<Grid columns="1">
 					<Grid.Row>
 						<Grid.Column>
 							<Zoom>
-								<YoutubePlayer videoId={this.state.videos[0]} />
+								<Header
+									content={this.state.active_video.title}
+									icon="youtube"
+								/>
+								<br />
+								<YoutubePlayer
+									ref={this.player}
+									videoId={this.state.active_video.id}
+									opts={{
+										playerVars: {
+											autoplay: this.state.autoplay
+										}
+									}}
+								/>
 							</Zoom>
 
 							<Carousel options={this.carouselOptions}>
-								<Zoom>
-									<Image src="https://dianesieg.com/wp-content/uploads/2016/11/video-player-placeholder-very-large.png" />
-								</Zoom>
-								<Zoom>
-									<Image src="https://dianesieg.com/wp-content/uploads/2016/11/video-player-placeholder-very-large.png" />
-								</Zoom>
-								<Zoom>
-									<Image src="https://dianesieg.com/wp-content/uploads/2016/11/video-player-placeholder-very-large.png" />
-								</Zoom>
-								<Zoom>
-									<Image src="https://dianesieg.com/wp-content/uploads/2016/11/video-player-placeholder-very-large.png" />
-								</Zoom>
-								<Zoom>
-									<Image src="https://dianesieg.com/wp-content/uploads/2016/11/video-player-placeholder-very-large.png" />
-								</Zoom>
-								<Zoom>
-									<Image src="https://dianesieg.com/wp-content/uploads/2016/11/video-player-placeholder-very-large.png" />
-								</Zoom>
+								{this.renderThumbnails()}
 							</Carousel>
 						</Grid.Column>
 					</Grid.Row>
