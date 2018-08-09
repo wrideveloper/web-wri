@@ -33,15 +33,25 @@ class Players extends Component {
 		)
 	}
 
+	renderCarousel() {
+		return this.state.videos.length > 0 ? (
+			<Carousel options={this.carouselOptions}>
+				{this.renderThumbnails()}
+			</Carousel>
+		) : (
+			''
+		)
+	}
+
 	renderThumbnails() {
 		return this.state.videos.map((video, index) => (
-			<Zoom key={index}>
-				<div onClick={() => this.changeActiveVideo(video)}>
+			<div key={index} onClick={() => this.changeActiveVideo(video)}>
+				<Zoom>
 					<Image src={video.thumbnail} />
 					<br />
 					<b>{video.title}</b>
-				</div>
-			</Zoom>
+				</Zoom>
+			</div>
 		))
 	}
 
@@ -73,9 +83,7 @@ class Players extends Component {
 								/>
 							</Zoom>
 
-							<Carousel options={this.carouselOptions}>
-								{this.renderThumbnails()}
-							</Carousel>
+							{this.renderCarousel()}
 						</Grid.Column>
 					</Grid.Row>
 				</Grid>

@@ -23,19 +23,27 @@ class Event extends Component {
 		getRecentEvents().then(events => this.setState({ events }))
 	}
 
+	renderCarousel() {
+		return this.state.events.length > 0 ? (
+			<Carousel options={this.carouselOptions}>{this.renderEvents()}</Carousel>
+		) : (
+			''
+		)
+	}
+
 	renderEvents() {
 		return this.state.events.map((event, index) => (
-			<Zoom key={index}>
-				<a href={event.url}>
-					<div>
+			<div key={index}>
+				<Zoom>
+					<a href={event.url}>
 						<Image src={event.image} fluid bordered />
 						<br />
 						<p>
 							<b>{event.title}</b>
 						</p>
-					</div>
-				</a>
-			</Zoom>
+					</a>
+				</Zoom>
+			</div>
 		))
 	}
 
@@ -61,11 +69,7 @@ class Event extends Component {
 						</Grid.Column>
 					</Grid.Row>
 					<Grid.Row>
-						<Grid.Column width="16">
-							<Carousel options={this.carouselOptions}>
-								{this.renderEvents()}
-							</Carousel>
-						</Grid.Column>
+						<Grid.Column width="16">{this.renderCarousel()}</Grid.Column>
 					</Grid.Row>
 				</Grid>
 			</Section>
