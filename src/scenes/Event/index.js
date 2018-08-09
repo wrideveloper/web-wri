@@ -16,7 +16,7 @@ class Event extends Component {
 		nav: true,
 		rewind: true,
 		autoplay: true,
-		margin: 5
+		margin: 15
 	}
 
 	componentDidMount() {
@@ -33,17 +33,13 @@ class Event extends Component {
 
 	renderEvents() {
 		return this.state.events.map((event, index) => (
-			<div key={index}>
-				<Zoom>
-					<a href={event.url}>
-						<Image src={event.image} fluid bordered />
-						<br />
-						<p>
-							<b>{event.title}</b>
-						</p>
-					</a>
-				</Zoom>
-			</div>
+			<Zoom key={index}>
+				<a href={event.url}>
+					<Image src={event.image} fluid />
+					<br />
+					<b>{event.title}</b>
+				</a>
+			</Zoom>
 		))
 	}
 
@@ -62,10 +58,14 @@ class Event extends Component {
 						<Grid.Column textAlign="right">
 							<Fade right>
 								<a href="https://www.eventbrite.com/o/workshop-riset-informatika-17325715953">
-									<Button icon labelPosition="left" color="green" size="huge">
-										<Icon name="calendar alternate outline" />
-										Selengkapnya
-									</Button>
+									<Button
+										icon
+										labelPosition="left"
+										color="green"
+										size="huge"
+										icon="calendar alternate outline"
+										content="Selengkapnya"
+									/>
 								</a>
 							</Fade>
 						</Grid.Column>

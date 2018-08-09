@@ -7,7 +7,6 @@ class PenjelasanKomunitas extends Component {
 	render() {
 		return (
 			<Fragment>
-				<br />
 				<div align="center">
 					<Rotate>
 						<Image src={require('./images/logo wri.png')} size="small" />

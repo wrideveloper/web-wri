@@ -19,13 +19,11 @@ const getRecentVideos = () => {
 }
 
 const getVideos = videosData => {
-	return videosData.map(videoData => {
-		return {
-			id: videoData.id.videoId,
-			title: videoData.snippet.title,
-			thumbnail: videoData.snippet.thumbnails.high.url
-		}
-	})
+	return videosData.map(videoData => ({
+		id: videoData.id.videoId,
+		title: videoData.snippet.title,
+		thumbnail: videoData.snippet.thumbnails.high.url
+	}))
 }
 
 export { getRecentVideos }

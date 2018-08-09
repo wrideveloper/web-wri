@@ -7,8 +7,8 @@ import { Link } from 'react-scroll'
 import styled from 'styled-components'
 
 const BerandaGrid = styled(Grid)`
-	padding-top: 60px !important;
-	padding-bottom: 60px !important;
+	padding-top: 100px !important;
+	padding-bottom: 100px !important;
 `
 
 const YoutubePlayer = styled(Youtube)`
@@ -29,10 +29,14 @@ class Beranda extends Component {
 							<SectionText text="PEMROGRAMAN" size="massive" bold />
 							<SectionText text="Ayo Gabung dengan WRI" size="medium" />
 							<Link to="Kegiatan" smooth offset={-74}>
-								<Button color="green" size="big" icon labelPosition="left">
-									<Icon name="arrow down" />
-									Lihat Kegiatan Kami
-								</Button>
+								<Button
+									color="green"
+									size="big"
+									icon
+									labelPosition="left"
+									icon="arrow down"
+									content="Lihat Kegiatan Kami"
+								/>
 							</Link>
 						</Fade>
 					</Grid.Column>

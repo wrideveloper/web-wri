@@ -18,13 +18,11 @@ const getRecentEvents = () => {
 }
 
 const getEvents = eventsData => {
-	return eventsData.map(eventData => {
-		return {
-			title: eventData.name.text,
-			url: eventData.url,
-			image: eventData.logo.original.url
-		}
-	})
+	return eventsData.map(eventData => ({
+		title: eventData.name.text,
+		url: eventData.url,
+		image: eventData.logo.original.url
+	}))
 }
 
 export { getRecentEvents }

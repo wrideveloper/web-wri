@@ -20,15 +20,7 @@ const adjustPosition = (direction, left, top) => {
 	}
 }
 
-const ImageComponent = ({
-	index,
-	onClick,
-	photo,
-	margin,
-	direction,
-	top,
-	left
-}) => {
+const ImageComponent = ({ index, photo, margin, direction, top, left }) => {
 	adjustPosition(direction, left, top)
 	return (
 		<Zoom>

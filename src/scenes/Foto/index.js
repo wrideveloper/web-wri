@@ -17,9 +17,7 @@ class Foto extends Component {
 	}
 
 	fetchPhotos() {
-		getRecentPhotos().then(photos => {
-			this.setState({ photos })
-		})
+		getRecentPhotos().then(photos => this.setState({ photos }))
 	}
 
 	render() {
