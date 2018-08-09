@@ -14,7 +14,7 @@ class SectionTitle extends Component {
 	}
 
 	static defaultProps = {
-		size: 'huge'
+		size: 'large'
 	}
 
 	render() {

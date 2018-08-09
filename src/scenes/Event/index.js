@@ -55,8 +55,8 @@ class Event extends Component {
 						<Grid.Column>
 							<SectionTitle
 								title="Event Kami"
-								description="Lorem ipsum dolor sit amet"
 								icon="calendar alternate outline"
+								description="Lorem ipsum dolor"
 							/>
 						</Grid.Column>
 						<Grid.Column textAlign="right">

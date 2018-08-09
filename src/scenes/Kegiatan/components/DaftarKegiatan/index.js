@@ -9,7 +9,7 @@ class DaftarKegiatan extends Component {
 				<SectionTitle
 					title="Kegiatan Kami"
 					icon="laptop"
-					description="lorem ipsum dolor sit amet"
+					description="Lorem ipsum dolor"
 				/>
 
 				<Grid columns="2" doubling>
