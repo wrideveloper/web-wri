@@ -1,22 +1,10 @@
 import React, { Component } from 'react'
-import { Grid, Button, Icon } from 'semantic-ui-react'
+import { Grid, Button } from 'semantic-ui-react'
 import { Section, SectionText } from '../../components'
 import Youtube from 'react-youtube'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
-
-const BerandaGrid = styled(Grid)`
-	padding-top: 100px !important;
-	padding-bottom: 100px !important;
-`
-
-const YoutubePlayer = styled(Youtube)`
-	border: solid 2px white;
-	border-radius: 5px;
-	width: 100%;
-	min-height: auto;
-`
 
 class Beranda extends Component {
 	render() {
@@ -32,7 +20,6 @@ class Beranda extends Component {
 								<Button
 									color="green"
 									size="big"
-									icon
 									labelPosition="left"
 									icon="arrow down"
 									content="Lihat Kegiatan Kami"
@@ -48,5 +35,17 @@ class Beranda extends Component {
 		)
 	}
 }
+
+const BerandaGrid = styled(Grid)`
+	padding-top: 100px !important;
+	padding-bottom: 100px !important;
+`
+
+const YoutubePlayer = styled(Youtube)`
+	border: solid 2px white;
+	border-radius: 5px;
+	width: 100%;
+	min-height: auto;
+`
 
 export default Beranda

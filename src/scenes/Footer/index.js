@@ -2,20 +2,6 @@ import React, { Component, Fragment } from 'react'
 import { Container, Image, Grid } from 'semantic-ui-react'
 import styled from 'styled-components'
 
-const TopSection = styled.div`
-	background-color: #0f0f0f;
-	color: white;
-	padding-top: 20px;
-	padding-bottom: 20px;
-`
-
-const BottomSection = styled.div`
-	background-color: black;
-	color: white;
-	padding-top: 15px;
-	padding-bottom: 15px;
-`
-
 class Footer extends Component {
 	render() {
 		return (
@@ -42,5 +28,19 @@ class Footer extends Component {
 		)
 	}
 }
+
+const TopSection = styled.div`
+	background-color: #0f0f0f;
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+`
+
+const BottomSection = styled.div`
+	background-color: black;
+	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
+`
 
 export default Footer

@@ -3,16 +3,6 @@ import { Menu, Image, Grid } from 'semantic-ui-react'
 import { scroller } from 'react-scroll'
 import styled from 'styled-components'
 
-const TransparentMenu = styled(Menu)`
-	background-color: ${props =>
-		props.transparent ? 'rgba(0, 0, 0, 0) !important' : ''};
-	transition: all 0.3s;
-`
-
-const Logo = styled(Image)`
-	margin-right: 15px;
-`
-
 class Navigator extends Component {
 	state = {
 		isMenuTransparent: true
@@ -79,5 +69,15 @@ class Navigator extends Component {
 		)
 	}
 }
+
+const TransparentMenu = styled(Menu)`
+	background-color: ${props =>
+		props.transparent ? 'rgba(0, 0, 0, 0) !important' : ''};
+	transition: all 0.3s;
+`
+
+const Logo = styled(Image)`
+	margin-right: 15px;
+`
 
 export default Navigator

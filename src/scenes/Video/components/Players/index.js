@@ -1,16 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import Youtube from 'react-youtube'
 import { Grid, Image, Header } from 'semantic-ui-react'
+import { Margin } from 'styled-components-spacing'
 import Zoom from 'react-reveal/Zoom'
 import styled from 'styled-components'
 import Carousel from 'react-owl-carousel2'
 
 import { getRecentVideos } from '../../services/youtube'
-
-const YoutubePlayer = styled(Youtube)`
-	width: 100%;
-	min-height: auto;
-`
 
 class Players extends Component {
 	state = {
@@ -20,7 +16,7 @@ class Players extends Component {
 	}
 
 	carouselOptions = {
-		items: 4,
+		items: 3,
 		nav: true,
 		rewind: true,
 		autoplay: true,
@@ -45,13 +41,12 @@ class Players extends Component {
 
 	renderThumbnails() {
 		return this.state.videos.map((video, index) => (
-			<div key={index} onClick={() => this.changeActiveVideo(video)}>
-				<Zoom>
+			<Zoom key={index}>
+				<div onClick={() => this.changeActiveVideo(video)}>
 					<Image src={video.thumbnail} />
-					<br />
-					<b>{video.title}</b>
-				</Zoom>
-			</div>
+					<Header size="tiny">{video.title}</Header>
+				</div>
+			</Zoom>
 		))
 	}
 
@@ -60,18 +55,16 @@ class Players extends Component {
 	}
 
 	render() {
-		console.log(this.state.videos)
 		return (
 			<Fragment>
 				<Grid columns="1">
 					<Grid.Row>
 						<Grid.Column>
 							<Zoom>
-								<Header
-									content={this.state.active_video.title}
-									icon="youtube"
-								/>
-								<br />
+								<Margin bottom={3}>
+									<Header content={this.state.active_video.title} />
+								</Margin>
+
 								<YoutubePlayer
 									ref={this.player}
 									videoId={this.state.active_video.id}
@@ -91,5 +84,10 @@ class Players extends Component {
 		)
 	}
 }
+
+const YoutubePlayer = styled(Youtube)`
+	width: 100%;
+	min-height: auto;
+`
 
 export default Players

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Section, SectionTitle } from '../../components'
-import { Grid, Image, Button, Icon } from 'semantic-ui-react'
+import { Grid, Image, Button, Header } from 'semantic-ui-react'
 import Carousel from 'react-owl-carousel2'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
@@ -35,9 +35,8 @@ class Event extends Component {
 		return this.state.events.map((event, index) => (
 			<Zoom key={index}>
 				<a href={event.url}>
-					<Image src={event.image} fluid />
-					<br />
-					<b>{event.title}</b>
+					<Image src={event.image} />
+					<Header size="tiny">{event.title}</Header>
 				</a>
 			</Zoom>
 		))
@@ -59,7 +58,6 @@ class Event extends Component {
 							<Fade right>
 								<a href="https://www.eventbrite.com/o/workshop-riset-informatika-17325715953">
 									<Button
-										icon
 										labelPosition="left"
 										color="green"
 										size="huge"

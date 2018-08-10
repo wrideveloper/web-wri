@@ -6630,6 +6630,16 @@ style-loader@0.19.0:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
+styled-components-breakpoint@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/styled-components-breakpoint/-/styled-components-breakpoint-2.1.0.tgz#839370362c1e084a23d1155286c9a8a1f2af853f"
+
+styled-components-spacing@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/styled-components-spacing/-/styled-components-spacing-3.1.0.tgz#5fa2640122b6c47169e60cb1460d556279354a23"
+  dependencies:
+    styled-components-breakpoint "^2.0.1"
+
 styled-components@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.0.tgz#d256fb4667e6c115a7ed61ab78f120283b43dd00"

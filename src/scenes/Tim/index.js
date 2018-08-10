@@ -1,14 +1,9 @@
 import React, { Component } from 'react'
 import { Section, SectionTitle } from '../../components/'
-import { Grid, Image, Header } from 'semantic-ui-react'
+import Member from './components/Member'
+import { Grid } from 'semantic-ui-react'
+import { Margin } from 'styled-components-spacing'
 import Carousel from 'react-owl-carousel2'
-import styled from 'styled-components'
-import Rotate from 'react-reveal/Rotate'
-import Fade from 'react-reveal/Fade'
-
-const Photo = styled(Image)`
-	border: solid 3px white;
-`
 
 class Tim extends Component {
 	carouselOptions = {
@@ -73,16 +68,11 @@ class Tim extends Component {
 	renderMembers() {
 		return this.members.map((member, index) => (
 			<div align="center" key={index}>
-				<Rotate>
-					<Photo src={member.photo} size="small" circular />
-				</Rotate>
-				<br />
-				<Fade top>
-					<Header inverted>
-						{member.name}
-						<Header.Subheader>{member.description}</Header.Subheader>
-					</Header>
-				</Fade>
+				<Member
+					photo={member.photo}
+					name={member.name}
+					description={member.description}
+				/>
 			</div>
 		))
 	}
@@ -98,20 +88,17 @@ class Tim extends Component {
 							icon="users"
 							inverted
 						/>
-						<div align="center">
-							<Rotate>
-								<Photo src={this.lead.photo} size="small" circular />
-							</Rotate>
-							<br />
-							<Fade top>
-								<Header inverted>
-									{this.lead.name}
-									<Header.Subheader>{this.lead.description}</Header.Subheader>
-								</Header>
-							</Fade>
-						</div>
-						<br />
-						<br />
+
+						<Margin bottom={5}>
+							<div align="center">
+								<Member
+									photo={this.lead.photo}
+									name={this.lead.name}
+									description={this.lead.description}
+								/>
+							</div>
+						</Margin>
+
 						<Carousel options={this.carouselOptions}>
 							{this.renderMembers()}
 						</Carousel>
