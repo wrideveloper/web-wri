@@ -1,21 +1,30 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Section } from '../../components'
-import { Grid } from 'semantic-ui-react'
-import { PenjelasanKomunitas, DaftarKegiatan } from './components'
+import { Grid, Header, Icon } from 'semantic-ui-react'
+import { JenisKegiatan, DaftarKegiatan } from './components'
+import { Margin } from 'styled-components-spacing'
 
 class Kegiatan extends Component {
 	render() {
 		return (
-			<Section>
-				<Grid columns="2" relaxed="very" doubling>
-					<Grid.Column width="8">
-						<PenjelasanKomunitas />
-					</Grid.Column>
-					<Grid.Column width="8">
-						<DaftarKegiatan />
-					</Grid.Column>
-				</Grid>
-			</Section>
+			<Fragment>
+				<Section bgImage={require('./images/background.jpg')} strength={200}>
+					<Grid textAlign="center">
+						<Grid.Row>
+							<Header icon inverted size="huge">
+								Kegiatan Kami
+								<Header.Subheader>Lorem ipsum dolor sit</Header.Subheader>
+							</Header>
+						</Grid.Row>
+						<Grid.Row>
+							<JenisKegiatan />
+						</Grid.Row>
+					</Grid>
+				</Section>
+				<Section>
+					<DaftarKegiatan />
+				</Section>
+			</Fragment>
 		)
 	}
 }

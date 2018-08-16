@@ -2,9 +2,9 @@ import React from 'react'
 import { Header, Icon } from 'semantic-ui-react'
 import Zoom from 'react-reveal/Zoom'
 
-const SectionItem = ({ title, icon, description, color, size }) => (
-	<Header size={size}>
-		<Icon name={icon} circular color={color} inverted />
+const SectionItem = ({ title, icon, description, color, size, inverted }) => (
+	<Header size={size} inverted={inverted}>
+		<Icon name={icon} circular color={color} inverted={inverted} />
 
 		<Header.Content>
 			<Zoom>

@@ -7,8 +7,8 @@ import 'react-owl-carousel2/src/owl.theme.default.css'
 import { Navigation } from './components'
 import {
 	Beranda,
+	Profil,
 	Kegiatan,
-	Event,
 	Foto,
 	Video,
 	Tim,
@@ -17,12 +17,20 @@ import {
 } from './scenes'
 
 class App extends Component {
-	menu = ['Beranda', 'Kegiatan', 'Event', 'Foto', 'Video', 'Tim Kami', 'Kontak']
+	menu = [
+		'Beranda',
+		'Profil',
+		'Kegiatan',
+		'Foto',
+		'Video',
+		'Tim Kami',
+		'Kontak'
+	]
 
 	scenes = [
 		<Beranda />,
+		<Profil />,
 		<Kegiatan />,
-		<Event />,
 		<Foto />,
 		<Video />,
 		<Tim />,

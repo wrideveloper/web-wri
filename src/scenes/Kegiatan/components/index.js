@@ -1,4 +1,4 @@
 import DaftarKegiatan from './DaftarKegiatan'
-import PenjelasanKomunitas from './PenjelasanKomunitas'
+import JenisKegiatan from './JenisKegiatan'
 
-export { DaftarKegiatan, PenjelasanKomunitas }
+export { DaftarKegiatan, JenisKegiatan }

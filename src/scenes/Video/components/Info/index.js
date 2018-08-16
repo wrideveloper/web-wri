@@ -41,11 +41,11 @@ class Info extends Component {
 				<Fade top>
 					<a href="https://www.youtube.com/channel/UCRDuxyMCKmyaX5rRDFo-RCQ">
 						<Button
-							color="youtube"
-							content="Selengkapya"
+							color="green"
+							content="Selengkapnya"
 							icon="youtube"
 							labelPosition="left"
-							size="massive"
+							size="huge"
 						/>
 					</a>
 				</Fade>
