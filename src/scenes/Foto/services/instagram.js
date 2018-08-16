@@ -7,7 +7,7 @@ const getRecentPhotos = () => {
 	return new Promise((resolve, rejects) => {
 		axios
 			.get(
-				`${host}/users/self/media/recent/?count=12&access_token=${access_code}`
+				`${host}/users/self/media/recent/?count=9&access_token=${access_code}`
 			)
 			.then(response => {
 				const images = getImages(response.data.data)

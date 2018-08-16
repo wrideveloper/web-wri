@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Section, SectionTitle } from '../../components/'
 import Member from './components/Member'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Header } from 'semantic-ui-react'
 import { Margin } from 'styled-components-spacing'
 import Carousel from 'react-owl-carousel2'
 
@@ -82,12 +82,16 @@ class Tim extends Component {
 			<Section bgImage={require('./images/background.jpg')} strength={200}>
 				<Grid columns="1">
 					<Grid.Column textAlign="center">
-						<SectionTitle
-							title="Tim Kami"
-							description="Lorem ipsum dolor"
-							icon="users"
-							inverted
-						/>
+						<Margin bottom={15}>
+							<Header size="large" inverted>
+								Tim Kami
+								<Header.Subheader content="Lorem ipsum dolor sit amet" />
+							</Header>
+						</Margin>
+
+						<br />
+						<br />
+						<br />
 
 						<Margin bottom={5}>
 							<div align="center">

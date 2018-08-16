@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { Grid, Button } from 'semantic-ui-react'
-import { Section, SectionTitle } from '../../components'
+import React, { Component, Fragment } from 'react'
+import { Grid, Button, Header } from 'semantic-ui-react'
+import { Section, SectionItem } from '../../components'
 import Gallery from 'react-photo-gallery'
 import ImageComponent from './components/ImageComponent'
 import Fade from 'react-reveal/Fade'
@@ -22,41 +22,41 @@ class Foto extends Component {
 
 	render() {
 		return (
-			<Section bgImage={require('./images/background.jpg')} strength={200}>
-				<Grid columns="2" doubling>
-					<Grid.Row>
-						<Grid.Column>
-							<SectionTitle
-								title="Foto Kegiatan"
-								description="Lorem ipsum dolor sit amet"
-								icon="instagram"
-								inverted
-							/>
-						</Grid.Column>
-						<Grid.Column textAlign="right">
-							<Fade right>
+			<Fragment>
+				<Section bgImage={require('./images/background.jpg')} strength={200}>
+					<Grid columns="1">
+						<Grid.Column textAlign="center">
+							<Header inverted size="huge">
+								Foto Kegiatan
+								<Header.Subheader content="Lorem ipsum dolor sit amet" />
+							</Header>
+							<Fade top>
 								<a href="https://www.instagram.com/wri_polinema/">
 									<Button
 										labelPosition="left"
 										color="green"
-										size="huge"
+										size="large"
 										icon="instagram"
 										content="Selengkapnya"
 									/>
 								</a>
 							</Fade>
 						</Grid.Column>
-					</Grid.Row>
-					<Grid.Column width="16">
-						<Gallery
-							photos={this.state.photos}
-							columns={4}
-							margin={3}
-							ImageComponent={ImageComponent}
-						/>
-					</Grid.Column>
-				</Grid>
-			</Section>
+					</Grid>
+				</Section>
+				<Section>
+					<Grid columns="1">
+						<Grid.Column>
+							<Gallery
+								photos={this.state.photos}
+								columns={3}
+								margin={3}
+								ImageComponent={ImageComponent}
+							/>
+						</Grid.Column>
+					</Grid>
+				</Section>
+			</Fragment>
 		)
 	}
 }

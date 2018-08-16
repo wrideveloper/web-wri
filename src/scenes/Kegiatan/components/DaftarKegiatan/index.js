@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Grid, Image, Button, Header } from 'semantic-ui-react'
-import { SectionTitle } from '../../../../components'
 import Carousel from 'react-owl-carousel2'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
@@ -47,11 +46,10 @@ class DaftarKegiatan extends Component {
 			<Grid columns="2" doubling>
 				<Grid.Row>
 					<Grid.Column>
-						<SectionTitle
-							title="Upcoming Event"
-							icon="calendar"
-							description="Lorem ipsum dolor sit amet"
-						/>
+						<Header size="large">
+							Kegiatan Mendatang
+							<Header.Subheader content="Jangan lewatkan kegiatan seru berikut" />
+						</Header>
 					</Grid.Column>
 					<Grid.Column textAlign="right">
 						<Fade right>

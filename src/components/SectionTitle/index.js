@@ -5,16 +5,17 @@ import Zoom from 'react-reveal/Zoom'
 
 class SectionTitle extends Component {
 	static propTypes = {
-		image: PropTypes.string,
 		icon: PropTypes.string,
 		title: PropTypes.string.isRequired,
 		description: PropTypes.string,
 		inverted: PropTypes.bool,
-		size: PropTypes.string
+		size: PropTypes.string,
+		color: PropTypes.string
 	}
 
 	static defaultProps = {
-		size: 'large'
+		size: 'medium',
+		color: 'orange'
 	}
 
 	render() {
@@ -22,11 +23,11 @@ class SectionTitle extends Component {
 			<Fragment>
 				<Header
 					size={this.props.size}
-					color="orange"
+					color={this.props.color}
 					inverted={this.props.inverted}>
 					<Icon
 						name={this.props.icon}
-						color="orange"
+						color={this.props.color}
 						circular
 						inverted={this.props.inverted}
 					/>

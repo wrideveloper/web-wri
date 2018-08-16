@@ -6,13 +6,6 @@ class DaftarKontak extends Component {
 	render() {
 		return (
 			<Fragment>
-				<SectionTitle
-					title="Hubungi Kami"
-					icon="chat"
-					description="lorem ipsum dolor sit amet"
-					size="medium"
-				/>
-
 				<Grid columns="2" stackable>
 					<Grid.Row>
 						<Grid.Column>

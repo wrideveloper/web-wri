@@ -6,13 +6,6 @@ class DaftarSosmed extends Component {
 	render() {
 		return (
 			<Fragment>
-				<SectionTitle
-					title="Ikuti Kami"
-					icon="rss"
-					description="lorem ipsum dolor sit amet"
-					size="medium"
-				/>
-
 				<Grid columns="2" stackable>
 					<Grid.Row>
 						<Grid.Column>

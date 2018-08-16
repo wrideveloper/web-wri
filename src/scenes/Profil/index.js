@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Section } from '../../components'
 import { Grid } from 'semantic-ui-react'
-import { PenjelasanKomunitas, DaftarKegiatan } from './components'
+import { PenjelasanKomunitas } from './components'
 
 class Profil extends Component {
 	render() {
@@ -11,9 +11,7 @@ class Profil extends Component {
 					<Grid.Column width="8">
 						<PenjelasanKomunitas />
 					</Grid.Column>
-					<Grid.Column width="8">
-						<DaftarKegiatan />
-					</Grid.Column>
+					<Grid.Column width="8" />
 				</Grid>
 			</Section>
 		)
