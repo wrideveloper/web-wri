@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Section, SectionTitle } from '../../components/'
+import { Section } from '../../components/'
 import Member from './components/Member'
-import { Grid, Header } from 'semantic-ui-react'
+import { Header } from 'semantic-ui-react'
 import { Margin } from 'styled-components-spacing'
 import Carousel from 'react-owl-carousel2'
 
@@ -80,34 +80,26 @@ class Tim extends Component {
 	render() {
 		return (
 			<Section bgImage={require('./images/background.jpg')} strength={200}>
-				<Grid columns="1">
-					<Grid.Column textAlign="center">
-						<Margin bottom={15}>
-							<Header size="large" inverted>
-								Tim Kami
-								<Header.Subheader content="Lorem ipsum dolor sit amet" />
-							</Header>
-						</Margin>
+				<div align="center">
+					<Header size="huge" inverted>
+						Tim Kami
+						<Header.Subheader content="Lorem ipsum dolor sit amet" />
+					</Header>
+				</div>
 
-						<br />
-						<br />
-						<br />
+				<Margin bottom={5} top={5}>
+					<div align="center">
+						<Member
+							photo={this.lead.photo}
+							name={this.lead.name}
+							description={this.lead.description}
+						/>
+					</div>
+				</Margin>
 
-						<Margin bottom={5}>
-							<div align="center">
-								<Member
-									photo={this.lead.photo}
-									name={this.lead.name}
-									description={this.lead.description}
-								/>
-							</div>
-						</Margin>
-
-						<Carousel options={this.carouselOptions}>
-							{this.renderMembers()}
-						</Carousel>
-					</Grid.Column>
-				</Grid>
+				<Carousel options={this.carouselOptions}>
+					{this.renderMembers()}
+				</Carousel>
 			</Section>
 		)
 	}

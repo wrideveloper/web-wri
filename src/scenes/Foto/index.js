@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import { Grid, Button, Header } from 'semantic-ui-react'
-import { Section, SectionItem } from '../../components'
+import { Button, Header } from 'semantic-ui-react'
+import { Section } from '../../components'
 import Gallery from 'react-photo-gallery'
 import ImageComponent from './components/ImageComponent'
 import Fade from 'react-reveal/Fade'
@@ -24,37 +24,31 @@ class Foto extends Component {
 		return (
 			<Fragment>
 				<Section bgImage={require('./images/background.jpg')} strength={200}>
-					<Grid columns="1">
-						<Grid.Column textAlign="center">
-							<Header inverted size="huge">
-								Foto Kegiatan
-								<Header.Subheader content="Lorem ipsum dolor sit amet" />
-							</Header>
-							<Fade top>
-								<a href="https://www.instagram.com/wri_polinema/">
-									<Button
-										labelPosition="left"
-										color="green"
-										size="large"
-										icon="instagram"
-										content="Selengkapnya"
-									/>
-								</a>
-							</Fade>
-						</Grid.Column>
-					</Grid>
+					<div align="center">
+						<Header inverted size="huge">
+							Foto Kegiatan
+							<Header.Subheader content="Lorem ipsum dolor sit amet" />
+						</Header>
+						<Fade top>
+							<a href="https://www.instagram.com/wri_polinema/">
+								<Button
+									labelPosition="left"
+									color="green"
+									size="large"
+									icon="instagram"
+									content="Selengkapnya"
+								/>
+							</a>
+						</Fade>
+					</div>
 				</Section>
 				<Section>
-					<Grid columns="1">
-						<Grid.Column>
-							<Gallery
-								photos={this.state.photos}
-								columns={3}
-								margin={3}
-								ImageComponent={ImageComponent}
-							/>
-						</Grid.Column>
-					</Grid>
+					<Gallery
+						photos={this.state.photos}
+						columns={3}
+						margin={5}
+						ImageComponent={ImageComponent}
+					/>
 				</Section>
 			</Fragment>
 		)

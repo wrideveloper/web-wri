@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { SectionTitle, SectionItem } from '../../../../components'
-import { Grid, Header, Icon } from 'semantic-ui-react'
+import { SectionItem } from '../../../../components'
+import { Grid } from 'semantic-ui-react'
 
 class JenisKegiatan extends Component {
 	render() {

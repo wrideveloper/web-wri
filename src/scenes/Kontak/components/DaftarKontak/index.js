@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { SectionTitle, SectionItem } from '../../../../components'
+import { SectionItem } from '../../../../components'
 import { Grid } from 'semantic-ui-react'
 
 class DaftarKontak extends Component {

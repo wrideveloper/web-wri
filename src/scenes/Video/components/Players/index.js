@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Youtube from 'react-youtube'
-import { Grid, Image, Header } from 'semantic-ui-react'
+import { Image, Header } from 'semantic-ui-react'
 import { Margin } from 'styled-components-spacing'
 import Zoom from 'react-reveal/Zoom'
 import styled from 'styled-components'
@@ -57,29 +57,23 @@ class Players extends Component {
 	render() {
 		return (
 			<Fragment>
-				<Grid columns="1">
-					<Grid.Row>
-						<Grid.Column>
-							<Zoom>
-								<Margin bottom={3}>
-									<Header content={this.state.active_video.title} />
-								</Margin>
+				<Zoom>
+					<Margin bottom={3}>
+						<Header content={this.state.active_video.title} />
+					</Margin>
 
-								<YoutubePlayer
-									ref={this.player}
-									videoId={this.state.active_video.id}
-									opts={{
-										playerVars: {
-											autoplay: this.state.autoplay
-										}
-									}}
-								/>
-							</Zoom>
+					<YoutubePlayer
+						ref={this.player}
+						videoId={this.state.active_video.id}
+						opts={{
+							playerVars: {
+								autoplay: this.state.autoplay
+							}
+						}}
+					/>
+				</Zoom>
 
-							{this.renderCarousel()}
-						</Grid.Column>
-					</Grid.Row>
-				</Grid>
+				{this.renderCarousel()}
 			</Fragment>
 		)
 	}
