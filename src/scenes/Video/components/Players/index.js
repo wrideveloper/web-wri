@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Youtube from 'react-youtube'
-import { Image, Header } from 'semantic-ui-react'
-import { Margin } from 'styled-components-spacing'
+import { Image, Header, Modal } from 'semantic-ui-react'
 import Zoom from 'react-reveal/Zoom'
 import styled from 'styled-components'
 import Carousel from 'react-owl-carousel2'
@@ -12,7 +11,8 @@ class Players extends Component {
 	state = {
 		videos: [],
 		active_video: '',
-		autoplay: 0
+		autoplay: 0,
+		isOpen: false
 	}
 
 	carouselOptions = {
@@ -51,28 +51,32 @@ class Players extends Component {
 	}
 
 	changeActiveVideo(video) {
-		this.setState({ active_video: video, autoplay: 1 })
+		this.setState({ active_video: video, autoplay: 1, isOpen: true })
+	}
+
+	closeModal() {
+		this.setState({ isOpen: false })
 	}
 
 	render() {
 		return (
 			<Fragment>
-				<Zoom>
-					<Margin bottom={3}>
-						<Header content={this.state.active_video.title} />
-					</Margin>
-
-					<YoutubePlayer
-						ref={this.player}
-						videoId={this.state.active_video.id}
-						opts={{
-							playerVars: {
-								autoplay: this.state.autoplay
-							}
-						}}
-					/>
-				</Zoom>
-
+				<Modal
+					size="small"
+					open={this.state.isOpen}
+					dimmer="blurring"
+					onClose={() => this.closeModal()}>
+					<Modal.Content>
+						<YoutubePlayer
+							videoId={this.state.active_video.id}
+							opts={{
+								playerVars: {
+									autoplay: this.state.autoplay
+								}
+							}}
+						/>
+					</Modal.Content>
+				</Modal>
 				{this.renderCarousel()}
 			</Fragment>
 		)
