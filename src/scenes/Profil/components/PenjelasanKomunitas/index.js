@@ -9,7 +9,7 @@ class PenjelasanKomunitas extends Component {
 			<Fragment>
 				<div align="center">
 					<Rotate>
-						<Image src={require('./images/logo wri.png')} size="small" />
+						<Image src={require('../../images/logo wri.png')} size="small" />
 						<br />
 					</Rotate>
 				</div>

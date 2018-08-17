@@ -5,7 +5,7 @@ import { Grid } from 'semantic-ui-react'
 class JenisKegiatan extends Component {
 	render() {
 		return (
-			<Grid columns={4}>
+			<Grid columns={4} stackable>
 				<Grid.Row divided centered>
 					<Grid.Column>
 						<SectionItem
