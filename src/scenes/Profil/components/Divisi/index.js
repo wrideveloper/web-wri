@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SectionItem, Margin } from '../../../../components'
+import { SectionItem, SectionText, Margin } from '../../../../components'
 import { Header, Image, Grid } from 'semantic-ui-react'
 import Fade from 'react-reveal/Fade'
 import Rotate from 'react-reveal/Rotate'
@@ -24,7 +24,7 @@ class Divisi extends Component {
           <Margin top={15} bottom={25}>
             <Fade top>
               <Header size="huge" content={this.props.name} />
-              <p>{this.props.description}</p>
+              <SectionText>{this.props.description}</SectionText>
             </Fade>
           </Margin>
         </div>
