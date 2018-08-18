@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { Section, SectionTitle } from '../../components/'
+import { Section, SectionTitle, Margin } from '../../components/'
 import Member from './components/Member'
-import { Margin } from 'styled-components-spacing'
 import Carousel from 'react-owl-carousel2'
 
 class Tim extends Component {
@@ -84,7 +83,7 @@ class Tim extends Component {
           description="Lorem ipsum dolor sit amet"
         />
 
-        <Margin bottom={5} top={5}>
+        <Margin top={50} bottom={40}>
           <div align="center">
             <Member
               photo={this.lead.photo}

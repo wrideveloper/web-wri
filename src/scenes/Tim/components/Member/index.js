@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { Image, Header } from 'semantic-ui-react'
-import { Margin } from 'styled-components-spacing'
+import { Margin } from '../../../../components'
 import styled from 'styled-components'
 import Rotate from 'react-reveal/Rotate'
 import Fade from 'react-reveal/Fade'
@@ -17,7 +17,7 @@ class Member extends Component {
     return (
       <Fragment>
         <Rotate>
-          <Margin bottom={3}>
+          <Margin bottom={20}>
             <Photo src={this.props.photo} size="small" circular />
           </Margin>
         </Rotate>
