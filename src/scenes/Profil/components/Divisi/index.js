@@ -16,21 +16,18 @@ class Divisi extends Component {
 	render() {
 		return (
 			<div>
-				<Grid columns="2" doubling>
-					<Grid.Column width="5">
-						<Rotate>
-							<Image src={this.props.image} size="small" />
-						</Rotate>
-					</Grid.Column>
-					<Grid.Column width="11">
-						<Fade top>
-							<Header size="huge">
-								{this.props.name}
-								<Header.Subheader content={this.props.description} />
-							</Header>
-						</Fade>
-					</Grid.Column>
-				</Grid>
+				<div align="center">
+					<Rotate>
+						<Image src={this.props.image} size="small" />
+						<br />
+					</Rotate>
+
+					<Fade top>
+						<Header size="huge" content={this.props.name} />
+						<p>{this.props.description}</p>
+						<br />
+					</Fade>
+				</div>
 
 				<Grid columns={3} doubling>
 					{this.props.subdivisi.map((subdivisi, index) => (

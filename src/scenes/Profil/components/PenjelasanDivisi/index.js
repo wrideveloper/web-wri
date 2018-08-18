@@ -14,18 +14,18 @@ class PenjelasanDivisi extends Component {
 		{
 			name: 'Pemrograman',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+				'Divisi pemrograman fokus terhadap pengembangan aplikasi dalam berbagai platform seperti web, mobile, dan desktop menggunakan bahasa pemrograman populer',
 			image: require('../../images/pemograman.png'),
 			subdivisi: [
-				{ name: 'Pengembangan Web', icon: 'globe' },
-				{ name: 'Aplikasi Mobile', icon: 'mobile alternate' },
-				{ name: 'Pengembangan Game', icon: 'game' }
+				{ name: 'Web App', icon: 'globe' },
+				{ name: 'Mobile App', icon: 'mobile alternate' },
+				{ name: 'Game', icon: 'game' }
 			]
 		},
 		{
 			name: 'Multimedia',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+				'Divisi multimedia merupakan divisi yang fokus terhadap desain dan analisa user interface, serta dalam pembuatan aset game',
 			image: require('../../images/multimedia.png'),
 			subdivisi: [
 				{ name: 'Desain UI', icon: 'list layout' },
@@ -36,7 +36,7 @@ class PenjelasanDivisi extends Component {
 		{
 			name: 'Networking',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+				'Divisi jaringan merupakan divisi yang merancang arsitektur jaringan dan internet of things',
 			image: require('../../images/network.png'),
 			subdivisi: [
 				{ name: 'Internet of Thing', icon: 'wifi' },

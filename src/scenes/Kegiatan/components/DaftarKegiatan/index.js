@@ -26,8 +26,8 @@ class DaftarKegiatan extends Component {
 		return this.state.events.length > 0 ? (
 			<Carousel options={this.carouselOptions}>{this.renderEvents()}</Carousel>
 		) : (
-			''
-		)
+				''
+			)
 	}
 
 	renderEvents() {
@@ -46,10 +46,7 @@ class DaftarKegiatan extends Component {
 			<Grid columns="2" doubling>
 				<Grid.Row>
 					<Grid.Column>
-						<Header size="large">
-							Kegiatan Mendatang
-							<Header.Subheader content="Jangan lewatkan kegiatan seru berikut" />
-						</Header>
+						<Header size="large">Kegiatan Mendatang</Header>
 					</Grid.Column>
 					<Grid.Column textAlign="right">
 						<Fade right>
