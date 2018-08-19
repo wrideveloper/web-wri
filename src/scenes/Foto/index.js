@@ -18,7 +18,7 @@ class Foto extends Component {
   render() {
     return (
       <Fragment>
-        <Section bgImage={require('./images/background.jpg')} strength={200}>
+        <Section bgImage={require('./images/background.jpg')} strength={1000}>
           <SectionTitle
             title="FOTO KEGIATAN"
             description="Lorem ipsum dolor sit amet">

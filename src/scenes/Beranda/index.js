@@ -1,13 +1,25 @@
 import React, { Component } from 'react'
-import { Grid, Button } from 'semantic-ui-react'
-import { Section } from '../../components'
-import Youtube from 'react-youtube'
+import { Grid, Button, Image } from 'semantic-ui-react'
+import { Section, Margin } from '../../components'
 import Fade from 'react-reveal/Fade'
 import { Link } from 'react-scroll'
 import styled from 'styled-components'
 import Text from './components/Text'
+import Carousel from 'react-owl-carousel2'
 
 class Beranda extends Component {
+  carouselOptions = {
+    items: 1,
+    dots: false,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    fallbackEasing: 'flash',
+    mouseDrag: false,
+    animateOut: 'slideOutDown',
+    animateIn: 'bounceInDown'
+  }
+
   render() {
     return (
       <Section bgImage={require('./images/background.jpg')} strength={200}>
@@ -15,21 +27,34 @@ class Beranda extends Component {
           <Grid.Column width="7" textAlign="right" only="computer">
             <Fade left>
               <Text value="Ingin Belajar" size="medium" />
-              <Text value="PEMROGRAMAN" size="massive" bold />
+              <Carousel options={this.carouselOptions}>
+                <div>
+                  <Text value="PEMROGRAMAN" size="massive" bold />
+                </div>
+                <div>
+                  <Text value="MULTIMEDIA" size="massive" bold />
+                </div>
+                <div>
+                  <Text value="NETWORKING" size="massive" bold />
+                </div>
+              </Carousel>
               <Text value="Ayo Gabung dengan WRI" size="medium" />
-              <Link to="Kegiatan" smooth offset={-74}>
-                <Button
-                  color="green"
-                  size="big"
-                  labelPosition="left"
-                  icon="arrow down"
-                  content="Lihat Kegiatan Kami"
-                />
-              </Link>
+
+              <Margin top={30}>
+                <Link to="Kegiatan" smooth offset={-74}>
+                  <Button
+                    color="green"
+                    size="big"
+                    labelPosition="left"
+                    icon="arrow down"
+                    content="Lihat Kegiatan Kami"
+                  />
+                </Link>
+              </Margin>
             </Fade>
           </Grid.Column>
-          <Grid.Column width="9" textAlign="center">
-            <YoutubePlayer videoId="slV8Hr3HJUU" />
+          <Grid.Column width="9">
+            <Image src={require('./images/ilustration.png')} />
           </Grid.Column>
         </BerandaGrid>
       </Section>
@@ -38,15 +63,8 @@ class Beranda extends Component {
 }
 
 const BerandaGrid = styled(Grid)`
-  padding-top: 100px !important;
-  padding-bottom: 100px !important;
-`
-
-const YoutubePlayer = styled(Youtube)`
-  border: solid 2px white;
-  border-radius: 5px;
-  width: 100%;
-  min-height: auto;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
 `
 
 export default Beranda

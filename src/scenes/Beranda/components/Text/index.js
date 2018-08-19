@@ -13,25 +13,16 @@ class Text extends Component {
   }
 
   render() {
-    return (
-      <Container>
-        <TextContainer {...this.props}>{this.props.value}</TextContainer>
-      </Container>
-    )
+    return <TextContainer {...this.props}>{this.props.value}</TextContainer>
   }
 }
 
 const TextContainer = styled.div`
-  background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: ${props => (props.size === 'massive' ? 30 : 15)}px;
-  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: ${props => fontSize[sizeLabel.indexOf(props.size)]}px;
   font-weight: ${props => (props.bold ? 'bold' : 'normal')};
-`
-
-const Container = styled.div`
-  margin-bottom: 15px;
 `
 
 export default Text
