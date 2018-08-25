@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Section, SectionTitle, Margin } from '../../components/'
 import Member from './components/Member'
 import Carousel from 'react-owl-carousel2'
+import styled from 'styled-components'
 
 class Tim extends Component {
   carouselOptions = {
@@ -13,53 +14,90 @@ class Tim extends Component {
 
   lead = {
     name: 'M. Nindra Zaka',
-    description: 'Lorem ipsum dolor sit amet',
-    photo:
-      'https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg'
+    description: 'Ketua Umum WRI',
+    photo: require('./images/members/aka.jpg')
   }
 
   members = [
     {
       name: 'Dinarpratnya Ningrum',
-      description: 'Lorem ipsum dolor sit amet',
-      photo:
-        'https://janecanblogdotcom.files.wordpress.com/2014/09/ashley-square-profile.jpg'
-    },
-    {
-      name: 'Ivan fadila Putra',
-      description: 'Lorem ipsum dolor sit amet',
-      photo:
-        'https://d3n8a8pro7vhmx.cloudfront.net/euromove/pages/175/attachments/original/1499183643/Stephen_square_profile.jpg?1499183643'
+      description: 'Sekretaris Umum WRI',
+      photo: require('./images/members/dinar.jpg')
     },
     {
       name: 'Ardhanarisvari Panduwinata',
-      description: 'Lorem ipsum dolor sit amet',
-      photo:
-        'https://static1.squarespace.com/static/52f1466be4b00a8e06e74ff5/t/597fa7e115d5dbed1724bf39/1501538276944/Square+profile+picture+1.jpg'
+      description: 'Bendahara Umum WRI',
+      photo: require('./images/members/arwi.jpg')
     },
     {
-      name: 'Berlian Nusantara',
-      description: 'Lorem ipsum dolor sit amet',
-      photo:
-        'http://sunrift.com/wp-content/uploads/2014/12/Blake-profile-photo-square.jpg'
+      name: 'Siti Kholifah',
+      description: 'Humas Internal WRI',
+      photo: require('./images/members/ifa.jpg')
     },
     {
       name: 'Brilyandika Andhana',
-      description: 'Lorem ipsum dolor sit amet',
-      photo:
-        'http://gokubi.com/wp-content/uploads/2013/10/Steve-Andersen-Headshot-square1.jpeg'
+      description: 'Humas Eksternal WRI',
+      photo: require('./images/members/dika.jpg')
     },
     {
-      name: 'Dio Syahrizal',
-      description: 'Lorem ipsum dolor sit amet',
-      photo:
-        'https://u.imageresize.org/v2/60fcd9e5-ce00-4914-9603-2a9c07d2c5ef.jpeg'
+      name: 'Ivan fadila Putra',
+      description: 'Ketua Divisi Pemrograman',
+      photo: require('./images/members/ivan.jpg')
     },
     {
-      name: 'Kholifa Cimmit',
-      description: 'Lorem ipsum dolor sit amet',
-      photo:
-        'https://2egi6j3s5pui2uv1ge1sp7h1-wpengine.netdna-ssl.com/wp-content/uploads/2017/04/profile-square.jpg'
+      name: 'Roy Achmad',
+      description: 'Ketua Divisi Multimedia',
+      photo: require('./images/members/roy.jpg')
+    },
+    {
+      name: 'Muhammad Syabhri',
+      description: 'Ketua Divisi Networking',
+      photo: require('./images/members/syabhri.jpg')
+    },
+    {
+      name: 'M. Dio Syahrizal',
+      description: 'Anggota Divisi Pemrograman',
+      photo: require('./images/members/dio.jpg')
+    },
+    {
+      name: 'M. Alfin Zakariya',
+      description: 'Anggota Divisi Pemrograman',
+      photo: require('./images/members/alfin.jpg')
+    },
+    {
+      name: 'M. Berlian Nusantara',
+      description: 'Anggota Divisi Pemrograman',
+      photo: require('./images/members/berlian.jpg')
+    },
+    {
+      name: 'Herlina Prastiwi',
+      description: 'Anggota Divisi Pemrograman',
+      photo: require('./images/members/herlina.jpg')
+    },
+    {
+      name: 'Novelia Yuliatika',
+      description: 'Anggota Divisi Multimedia',
+      photo: require('./images/members/tika.jpg')
+    },
+    {
+      name: 'Rio Irvansyah',
+      description: 'Anggota Divisi Multimedia',
+      photo: require('./images/members/rio.jpg')
+    },
+    {
+      name: 'Rahmat A.',
+      description: 'Anggota Divisi Networking',
+      photo: require('./images/members/rahmat.jpg')
+    },
+    {
+      name: 'Faisal Apriliawan',
+      description: 'Anggota Divisi Networking',
+      photo: require('./images/members/faisal.jpg')
+    },
+    {
+      name: 'Rizky Firmansyah',
+      description: 'Anggota Divisi Networking',
+      photo: require('./images/members/rizky.jpg')
     }
   ]
 
@@ -77,13 +115,13 @@ class Tim extends Component {
 
   render() {
     return (
-      <Section bgImage={require('./images/background.jpg')} strength={200}>
+      <TimSection bgImage={require('./images/background.jpg')} strength={200}>
         <SectionTitle
           title="TIM KAMI"
           description="Lorem ipsum dolor sit amet"
         />
 
-        <Margin top={50} bottom={40}>
+        <Margin top={70} bottom={70}>
           <div align="center">
             <Member
               photo={this.lead.photo}
@@ -96,9 +134,14 @@ class Tim extends Component {
         <Carousel options={this.carouselOptions}>
           {this.renderMembers()}
         </Carousel>
-      </Section>
+      </TimSection>
     )
   }
 }
+
+const TimSection = styled(Section)`
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+`
 
 export default Tim
