@@ -10,7 +10,7 @@ class Video extends Component {
         <Section bgImage={require('./images/background.jpg')} strength={200}>
           <SectionTitle
             title="VIDEO KAMI"
-            description="Lorem ipsum dolor sit amet">
+            description="Kumpulan video workshop riset informatika">
             <a href="https://www.youtube.com/channel/UCRDuxyMCKmyaX5rRDFo-RCQ">
               <Button
                 labelPosition="left"

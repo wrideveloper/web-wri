@@ -21,7 +21,7 @@ class Foto extends Component {
         <Section bgImage={require('./images/background.jpg')} strength={1000}>
           <SectionTitle
             title="FOTO KEGIATAN"
-            description="Lorem ipsum dolor sit amet">
+            description="Kumpulan foto workshop riset informatika">
             <a href="https://www.instagram.com/wri_polinema/">
               <Button
                 labelPosition="left"

@@ -8,84 +8,83 @@ import Carousel from 'react-owl-carousel2'
 import { getRecentVideos } from '../../services/youtube'
 
 class Players extends Component {
-	state = {
-		videos: [],
-		active_video: '',
-		autoplay: 0,
-		isOpen: false
-	}
+  state = {
+    videos: [],
+    active_video: '',
+    autoplay: 0,
+    isOpen: false
+  }
 
-	carouselOptions = {
-		items: 3,
-		nav: true,
-		rewind: true,
-		autoplay: true,
-		margin: 5
-	}
+  carouselOptions = {
+    items: 3,
+    rewind: true,
+    autoplay: true,
+    margin: 5
+  }
 
-	componentDidMount() {
-		getRecentVideos().then(videos =>
-			this.setState({ videos, active_video: videos[0] })
-		)
-	}
+  componentDidMount() {
+    getRecentVideos().then(videos =>
+      this.setState({ videos, active_video: videos[0] })
+    )
+  }
 
-	renderCarousel() {
-		return this.state.videos.length > 0 ? (
-			<Carousel options={this.carouselOptions}>
-				{this.renderThumbnails()}
-			</Carousel>
-		) : (
-			''
-		)
-	}
+  renderCarousel() {
+    return this.state.videos.length > 0 ? (
+      <Carousel options={this.carouselOptions}>
+        {this.renderThumbnails()}
+      </Carousel>
+    ) : (
+      ''
+    )
+  }
 
-	renderThumbnails() {
-		return this.state.videos.map((video, index) => (
-			<Zoom key={index}>
-				<div onClick={() => this.changeActiveVideo(video)}>
-					<Image src={video.thumbnail} />
-					<Header size="tiny">{video.title}</Header>
-				</div>
-			</Zoom>
-		))
-	}
+  renderThumbnails() {
+    return this.state.videos.map((video, index) => (
+      <Zoom key={index}>
+        <div onClick={() => this.changeActiveVideo(video)}>
+          <Image src={video.thumbnail} />
+          <Header size="tiny">{video.title}</Header>
+        </div>
+      </Zoom>
+    ))
+  }
 
-	changeActiveVideo(video) {
-		this.setState({ active_video: video, autoplay: 1, isOpen: true })
-	}
+  changeActiveVideo(video) {
+    this.setState({ active_video: video, autoplay: 1, isOpen: true })
+  }
 
-	closeModal() {
-		this.setState({ isOpen: false })
-	}
+  closeModal() {
+    this.setState({ isOpen: false })
+  }
 
-	render() {
-		return (
-			<Fragment>
-				<Modal
-					size="small"
-					open={this.state.isOpen}
-					dimmer="blurring"
-					onClose={() => this.closeModal()}>
-					<Modal.Content>
-						<YoutubePlayer
-							videoId={this.state.active_video.id}
-							opts={{
-								playerVars: {
-									autoplay: this.state.autoplay
-								}
-							}}
-						/>
-					</Modal.Content>
-				</Modal>
-				{this.renderCarousel()}
-			</Fragment>
-		)
-	}
+  render() {
+    return (
+      <Fragment>
+        <Modal
+          size="small"
+          open={this.state.isOpen}
+          dimmer="blurring"
+          onClose={() => this.closeModal()}>
+          <Modal.Content>
+            <YoutubePlayer
+              videoId={this.state.active_video.id}
+              opts={{
+                playerVars: {
+                  autoplay: this.state.autoplay
+                }
+              }}
+            />
+          </Modal.Content>
+        </Modal>
+        {this.renderCarousel()}
+      </Fragment>
+    )
+  }
 }
 
 const YoutubePlayer = styled(Youtube)`
-	width: 100%;
-	min-height: auto;
+  width: 100%;
+  min-height: auto;
 `
 
 export default Players

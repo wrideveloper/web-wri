@@ -36,6 +36,7 @@ class Divisi extends Component {
                 title={subdivisi.name}
                 icon={subdivisi.icon}
                 size="small"
+                circular
               />
             </Grid.Column>
           ))}

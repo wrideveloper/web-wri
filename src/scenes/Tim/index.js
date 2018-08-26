@@ -118,7 +118,7 @@ class Tim extends Component {
       <TimSection bgImage={require('./images/background.jpg')} strength={200}>
         <SectionTitle
           title="TIM KAMI"
-          description="Lorem ipsum dolor sit amet"
+          description="Siap berkontribusi demi kemajuan bersama"
         />
 
         <Margin top={70} bottom={70}>

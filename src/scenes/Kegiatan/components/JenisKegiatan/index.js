@@ -10,7 +10,7 @@ class JenisKegiatan extends Component {
           <Grid.Column>
             <SectionItem
               title="Miniclass"
-              description="Lorem ipsum dolor"
+              description="Mempelajari hal dasar dari masing - masing divisi"
               icon="users"
               inverted
               color="orange"
@@ -21,7 +21,7 @@ class JenisKegiatan extends Component {
           <Grid.Column>
             <SectionItem
               title="Open Talk"
-              description="Lorem ipsum dolor"
+              description="Meetup bulanan untuk berdiskusi seputar dunia IT"
               icon="volume up"
               inverted
               color="orange"
@@ -32,7 +32,7 @@ class JenisKegiatan extends Component {
           <Grid.Column>
             <SectionItem
               title="Workshop"
-              description="Lorem ipsum dolor"
+              description="Meningkatkan skill dengan praktek langsung"
               icon="laptop"
               inverted
               color="orange"
@@ -43,7 +43,7 @@ class JenisKegiatan extends Component {
           <Grid.Column>
             <SectionItem
               title="Membuat Produk"
-              description="Lorem ipsum dolor"
+              description="Mengimplementasikan skill yang dimiliki lewat produk"
               icon="window maximize outline"
               inverted
               color="orange"

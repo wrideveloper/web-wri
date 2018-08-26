@@ -27,17 +27,20 @@ class Beranda extends Component {
           <Grid.Column width="7" textAlign="right" only="computer">
             <Fade left>
               <Text value="Ingin Belajar" size="medium" />
-              <Carousel options={this.carouselOptions}>
-                <div>
-                  <Text value="PEMROGRAMAN" size="massive" bold />
-                </div>
-                <div>
-                  <Text value="MULTIMEDIA" size="massive" bold />
-                </div>
-                <div>
-                  <Text value="NETWORKING" size="massive" bold />
-                </div>
-              </Carousel>
+            </Fade>
+            <Carousel options={this.carouselOptions}>
+              <div>
+                <Text value="PEMROGRAMAN" size="massive" bold />
+              </div>
+              <div>
+                <Text value="MULTIMEDIA" size="massive" bold />
+              </div>
+              <div>
+                <Text value="NETWORKING" size="massive" bold />
+              </div>
+            </Carousel>
+
+            <Fade left>
               <Text value="Ayo Gabung dengan WRI" size="medium" />
 
               <Margin top={30}>
