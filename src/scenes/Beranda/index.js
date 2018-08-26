@@ -41,13 +41,13 @@ class Beranda extends Component {
               <Text value="Ayo Gabung dengan WRI" size="medium" />
 
               <Margin top={30}>
-                <Link to="Kegiatan" smooth offset={-74}>
+                <Link to="Kontak" smooth offset={-74}>
                   <Button
                     color="green"
                     size="big"
                     labelPosition="left"
                     icon="arrow down"
-                    content="Lihat Kegiatan Kami"
+                    content="Gabung Sekarang"
                   />
                 </Link>
               </Margin>
