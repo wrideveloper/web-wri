@@ -1,8 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import { Element } from 'react-scroll'
-import 'semantic-ui-css/semantic.min.css'
-import 'react-owl-carousel2/src/owl.carousel.css'
-import 'react-owl-carousel2/src/owl.theme.default.css'
 
 import { Navigation } from './components'
 import { Beranda, Profil, Kegiatan, Foto, Video, Tim, Footer } from './scenes'
