@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Element } from 'react-scroll'
 import 'semantic-ui-css/semantic.min.css'
 import 'react-owl-carousel2/src/owl.carousel.css'
@@ -38,10 +38,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Navigation menu={this.menu} />
         {this.renderScenes()}
-      </div>
+      </Fragment>
     )
   }
 }

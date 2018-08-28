@@ -4,6 +4,7 @@ import Kegiatan from './Kegiatan'
 import Foto from './Foto'
 import Video from './Video'
 import Tim from './Tim'
+import Faq from './Faq'
 import Footer from './Footer'
 
-export { Beranda, Profil, Kegiatan, Foto, Video, Tim, Footer }
+export { Beranda, Profil, Kegiatan, Foto, Video, Tim, Faq, Footer }
