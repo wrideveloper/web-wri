@@ -2,7 +2,16 @@ import React, { Component, Fragment } from 'react'
 import { Element } from 'react-scroll'
 
 import { Navigation } from './components'
-import { Beranda, Profil, Kegiatan, Foto, Video, Tim, Footer } from './scenes'
+import {
+  Beranda,
+  Profil,
+  Kegiatan,
+  Foto,
+  Video,
+  Tim,
+  Footer,
+  Artikel
+} from './scenes'
 
 class App extends Component {
   menu = [
@@ -10,6 +19,7 @@ class App extends Component {
     'Profil',
     'Kegiatan',
     'Foto',
+    'Artikel',
     'Video',
     'Tim Kami',
     'Kontak'
@@ -20,6 +30,7 @@ class App extends Component {
     <Profil />,
     <Kegiatan />,
     <Foto />,
+    <Artikel />,
     <Video />,
     <Tim />,
     <Footer />
