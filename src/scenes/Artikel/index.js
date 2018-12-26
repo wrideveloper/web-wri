@@ -26,7 +26,7 @@ class Artikel extends Component {
           <SectionTitle
             title='ARTIKEL KAMI'
             description='Kumpulan artikel workshop riset informatika'>
-            <a href='https://medium.com/wripolinemamedium'>
+            <a href='https://medium.com/wripolinema'>
               <Button
                 labelPosition='left'
                 color='green'
