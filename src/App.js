@@ -8,22 +8,12 @@ import {
   Kegiatan,
   Foto,
   Video,
-  Tim,
   Footer,
   Artikel
 } from './scenes'
 
 class App extends Component {
-  menu = [
-    'Beranda',
-    'Profil',
-    'Kegiatan',
-    'Foto',
-    'Artikel',
-    'Video',
-    'Tim Kami',
-    'Kontak'
-  ]
+  menu = ['Beranda', 'Profil', 'Kegiatan', 'Foto', 'Artikel', 'Video', 'Kontak']
 
   scenes = [
     <Beranda />,
@@ -32,7 +22,6 @@ class App extends Component {
     <Foto />,
     <Artikel />,
     <Video />,
-    <Tim />,
     <Footer />
   ]
 
